@@ -93,120 +93,129 @@ const StoryJourney = () => {
       </div>
 
       <div className="section-container pb-16 lg:pb-24">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-center">
+        {/* Main Content Grid */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20 items-center mb-16">
           
-          {/* Left Column: Text & Navigation (7 cols on lg) */}
-          <div className="lg:col-span-7 flex flex-col justify-between min-h-[480px]">
-            {/* Content Area */}
-            <div className="w-full py-4">
-              <AnimatePresence mode="wait">
-                <motion.div
-                  key={activeStage}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  exit={{ opacity: 0, y: -20 }}
-                  transition={{ duration: 0.5, ease: "easeOut" }}
-                >
-                  {/* Stage icon & label in a row */}
-                  <div className="flex items-center gap-4 mb-6">
-                    <div 
-                      className="w-12 h-12 rounded-xl flex items-center justify-center"
-                      style={{ backgroundColor: `${currentStage.accent}30` }}
-                    >
-                      <Icon size={24} color={currentStage.accent} />
-                    </div>
-                    <span 
-                      className="inline-block px-4 py-1.5 rounded-full text-xs font-body font-semibold tracking-widest uppercase"
-                      style={{ backgroundColor: `${currentStage.accent}25`, color: currentStage.accent }}
-                    >
-                      Stage 0{currentStage.id}
-                    </span>
-                  </div>
-
-                  {/* Headline */}
-                  <h3 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4 lg:mb-6 leading-tight">
-                    {currentStage.headline}
-                  </h3>
-
-                  {/* Description */}
-                  <p className="font-body text-base md:text-lg text-white/80 leading-relaxed max-w-xl">
-                    {currentStage.description}
-                  </p>
-                </motion.div>
-              </AnimatePresence>
-            </div>
-
-            {/* Navigation/Progress Area */}
-            <div className="w-full pt-8 flex items-center justify-between">
-              {/* Play/Pause Toggle */}
-              <button 
-                onClick={() => setAutoPlay(!autoPlay)}
-                className="flex items-center gap-2 text-white/50 hover:text-white transition-colors group bg-white/5 px-4 py-2 rounded-full backdrop-blur-md"
-                title={autoPlay ? "Pause Slideshow" : "Play Slideshow"}
+          {/* Left Column: Text (5 cols on lg) */}
+          <div className="lg:col-span-5 flex flex-col justify-center">
+            <AnimatePresence mode="wait">
+              <motion.div
+                key={activeStage}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -20 }}
+                transition={{ duration: 0.5, ease: "easeOut" }}
               >
-                {autoPlay ? <Pause size={14} className="group-hover:text-secondary" /> : <Play size={14} className="group-hover:text-secondary" />}
-                <span className="text-xs font-body tracking-widest uppercase hidden sm:block">
-                  {autoPlay ? 'Auto' : 'Paused'}
-                </span>
-              </button>
-
-              {/* Stage Indicators */}
-              <div className="flex items-center gap-2 lg:gap-3">
-                {stages.map((stage, i) => (
-                  <button
-                    key={stage.id}
-                    onClick={() => {
-                      setActiveStage(i);
-                      setAutoPlay(false); // Stop autoplay if user manually clicks
-                    }}
-                    className="relative flex flex-col items-center gap-2 group"
+                {/* Stage icon & label in a row */}
+                <div className="flex items-center gap-4 mb-8">
+                  <div 
+                    className="w-14 h-14 rounded-2xl flex items-center justify-center shadow-lg"
+                    style={{ backgroundColor: `${currentStage.accent}20`, border: `1px solid ${currentStage.accent}40` }}
                   >
-                    <span className={`text-[10px] font-body tracking-widest uppercase hidden md:block transition-colors
-                      ${i === activeStage ? 'text-secondary' : 'text-white/40 group-hover:text-white/70'}`}>
-                      {stage.title}
-                    </span>
-                    
-                    {/* Progress Line */}
-                    <div className="w-8 lg:w-14 h-1.5 bg-white/20 overflow-hidden relative rounded-full">
-                      {i === activeStage && (
-                        <motion.div
-                          className="absolute top-0 left-0 h-full bg-secondary"
-                          initial={{ width: autoPlay ? "0%" : "100%" }}
-                          animate={{ width: "100%" }}
-                          transition={{ 
-                            duration: autoPlay ? 6 : 0, 
-                            ease: "linear" 
-                          }}
-                        />
-                      )}
-                      {i < activeStage && (
-                        <div className="absolute top-0 left-0 h-full w-full bg-secondary/50" />
-                      )}
-                    </div>
-                  </button>
-                ))}
-              </div>
-            </div>
+                    <Icon size={26} color={currentStage.accent} />
+                  </div>
+                  <span 
+                    className="inline-block px-5 py-2 rounded-full text-xs font-body font-bold tracking-widest uppercase shadow-sm"
+                    style={{ backgroundColor: `${currentStage.accent}15`, color: currentStage.accent, border: `1px solid ${currentStage.accent}30` }}
+                  >
+                    Stage 0{currentStage.id}
+                  </span>
+                </div>
+
+                {/* Headline */}
+                <h3 className="font-display text-4xl md:text-5xl lg:text-5xl font-bold text-white mb-6 leading-tight">
+                  {currentStage.headline}
+                </h3>
+
+                {/* Description */}
+                <p className="font-body text-lg text-white/70 leading-relaxed">
+                  {currentStage.description}
+                </p>
+              </motion.div>
+            </AnimatePresence>
           </div>
 
-          {/* Right Column: Image (5 cols on lg) */}
-          <div className="lg:col-span-5 flex justify-center items-center mt-8 lg:mt-0">
-            <div className="relative w-full max-w-[450px] aspect-square rounded-3xl overflow-hidden shadow-2xl border-4 border-white/5 bg-charcoal/20">
+          {/* Right Column: Image (7 cols on lg) */}
+          <div className="lg:col-span-7 relative">
+            {/* Decorative background glow */}
+            <div 
+              className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full max-w-[600px] blur-[120px] rounded-full pointer-events-none opacity-40 transition-colors duration-1000 hidden md:block"
+              style={{ backgroundColor: currentStage.accent }}
+            />
+            
+            {/* Image Container */}
+            <div className="relative w-full aspect-square md:aspect-[4/3] lg:aspect-square rounded-[2.5rem] overflow-hidden shadow-[0_20px_60px_rgba(0,0,0,0.6)] border border-white/10 group">
               <AnimatePresence mode="wait">
                 <motion.img
                   key={activeStage}
                   src={currentStage.image}
                   alt={currentStage.title}
-                  initial={{ opacity: 0, scale: 0.95 }}
+                  initial={{ opacity: 0, scale: 1.05 }}
                   animate={{ opacity: 1, scale: 1 }}
-                  exit={{ opacity: 0, scale: 1.05 }}
-                  transition={{ duration: 0.5 }}
+                  exit={{ opacity: 0 }}
+                  transition={{ duration: 0.7, ease: "easeOut" }}
                   className="w-full h-full object-cover"
                 />
               </AnimatePresence>
+              
+              {/* Subtle overlay gradient to make it blend better */}
+              <div className="absolute inset-0 bg-gradient-to-tr from-charcoal-dark/50 via-transparent to-transparent pointer-events-none" />
             </div>
           </div>
 
+        </div>
+
+        {/* Bottom Navigation / Progress Area (Full Width) */}
+        <div className="flex flex-col md:flex-row items-center justify-between gap-8 pt-8 border-t border-white/10">
+          
+          {/* Play/Pause Toggle */}
+          <button 
+            onClick={() => setAutoPlay(!autoPlay)}
+            className="flex items-center gap-3 text-white/50 hover:text-white transition-colors group bg-white/5 hover:bg-white/10 px-6 py-3 rounded-full backdrop-blur-md"
+            title={autoPlay ? "Pause Slideshow" : "Play Slideshow"}
+          >
+            {autoPlay ? <Pause size={16} className="group-hover:text-secondary" /> : <Play size={16} className="group-hover:text-secondary" />}
+            <span className="text-sm font-body font-semibold tracking-widest uppercase">
+              {autoPlay ? 'Auto-Playing' : 'Paused'}
+            </span>
+          </button>
+
+          {/* Stage Indicators */}
+          <div className="flex items-center gap-4 lg:gap-6 w-full md:w-auto overflow-x-auto pb-4 md:pb-0 scrollbar-hide">
+            {stages.map((stage, i) => (
+              <button
+                key={stage.id}
+                onClick={() => {
+                  setActiveStage(i);
+                  setAutoPlay(false); // Stop autoplay if user manually clicks
+                }}
+                className="relative flex flex-col items-start gap-3 group min-w-[100px]"
+              >
+                <span className={`text-xs font-body font-semibold tracking-widest uppercase transition-colors whitespace-nowrap
+                  ${i === activeStage ? 'text-secondary' : 'text-white/40 group-hover:text-white/80'}`}>
+                  {stage.title}
+                </span>
+                
+                {/* Progress Line */}
+                <div className="w-full h-1.5 bg-white/10 overflow-hidden relative rounded-full">
+                  {i === activeStage && (
+                    <motion.div
+                      className="absolute top-0 left-0 h-full bg-secondary shadow-[0_0_10px_rgba(201,168,76,0.5)]"
+                      initial={{ width: autoPlay ? "0%" : "100%" }}
+                      animate={{ width: "100%" }}
+                      transition={{ 
+                        duration: autoPlay ? 6 : 0, 
+                        ease: "linear" 
+                      }}
+                    />
+                  )}
+                  {i < activeStage && (
+                    <div className="absolute top-0 left-0 h-full w-full bg-secondary/50" />
+                  )}
+                </div>
+              </button>
+            ))}
+          </div>
         </div>
       </div>
     </section>
