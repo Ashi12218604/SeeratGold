@@ -1,6 +1,5 @@
 import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
-import { motion, AnimatePresence } from 'framer-motion';
 import Navbar from './Navbar';
 import AnnouncementBar from './AnnouncementBar';
 import Footer from './Footer';
@@ -19,21 +18,9 @@ const Layout = ({ children }) => {
       <AnnouncementBar />
       <Navbar />
       
-      <AnimatePresence mode="wait">
-        <motion.main
-          key={location.pathname}
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          exit={{ opacity: 0 }}
-          transition={{ 
-            duration: 0.3, 
-            ease: 'easeOut'
-          }}
-          className="flex-1"
-        >
-          {children}
-        </motion.main>
-      </AnimatePresence>
+      <main className="flex-1">
+        {children}
+      </main>
 
       <Footer />
       <FloatingWhatsApp />
@@ -42,3 +29,4 @@ const Layout = ({ children }) => {
 };
 
 export default Layout;
+
