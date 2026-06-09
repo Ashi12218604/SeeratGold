@@ -52,9 +52,9 @@ const WhySeeratGold = () => {
           subtitle="What makes our spices special — from farm to your kitchen."
         />
 
-        <div className="flex flex-col lg:flex-row gap-10 lg:gap-16 mt-12">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 mt-12 items-center">
           {/* Left: Dynamic Image Display */}
-          <div className="w-full lg:w-1/2 relative h-[400px] lg:h-[600px] rounded-[2rem] overflow-hidden shadow-2xl group">
+          <div className="lg:col-span-7 relative h-[450px] lg:h-[700px] rounded-[2.5rem] overflow-hidden shadow-2xl group">
             {usps.map((usp, i) => {
               const isActive = activeIndex === i;
               return (
@@ -77,9 +77,9 @@ const WhySeeratGold = () => {
                   {/* Premium dark gradient overlay */}
                   <div className="absolute inset-0 bg-gradient-to-t from-primary-900/90 via-primary-900/20 to-transparent" />
                   
-                  <div className="absolute bottom-8 left-8 right-8 text-white">
-                    <usp.icon size={48} className="text-secondary mb-4 opacity-90" strokeWidth={1.5} />
-                    <h3 className="font-display text-3xl md:text-4xl font-bold mb-2">
+                  <div className="absolute bottom-10 left-10 right-10 text-white">
+                    <usp.icon size={56} className="text-secondary mb-4 opacity-90" strokeWidth={1.5} />
+                    <h3 className="font-display text-4xl md:text-5xl font-bold mb-2 drop-shadow-md">
                       {usp.title}
                     </h3>
                   </div>
@@ -89,7 +89,7 @@ const WhySeeratGold = () => {
           </div>
 
           {/* Right: Interactive List */}
-          <div className="w-full lg:w-1/2 flex flex-col justify-center gap-3 md:gap-4">
+          <div className="lg:col-span-5 flex flex-col justify-center gap-3 md:gap-5">
             {usps.map((usp, i) => {
               const isActive = activeIndex === i;
               return (
