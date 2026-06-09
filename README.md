@@ -58,12 +58,6 @@ Make sure you have [Node.js](https://nodejs.org/) installed on your local machin
    npm run dev
    ```
 
-The application will be live at `http://localhost:5173`.
-
-## 📞 Contact & Support
-- **WhatsApp:** [+91 92585 65788](https://wa.me/message/3SAEESWTZ7RWP1)
-- **Email:** snvlaghudyog01@gmail.com
-- **Address:** Seerat Gold, Bhandari Bagh, Dehradun, Uttarakhand 248001
 
 ---
 <div align="center">
