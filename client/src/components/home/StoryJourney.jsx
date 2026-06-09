@@ -77,130 +77,105 @@ const StoryJourney = () => {
   const Icon = currentStage.icon;
 
   return (
-    <section id="story-section" className="relative w-full bg-charcoal-dark overflow-hidden pt-16 lg:pt-24 pb-0">
+    <section id="story-section" className="relative w-full min-h-screen flex flex-col bg-charcoal-dark overflow-hidden">
       
-      {/* Section Header */}
-      <div className="section-container mb-12 lg:mb-16">
-        <div className="text-center">
-          <span className="text-secondary font-body text-xs font-medium tracking-widest uppercase">
-            Our Journey
-          </span>
-          <h2 className="font-display text-3xl md:text-4xl font-bold text-white mt-2 mb-4">
-            From Source to Kitchen
-          </h2>
-          <div className="w-16 h-1 bg-gradient-gold mx-auto rounded-full" />
-        </div>
-      </div>
+      {/* Full Page Background Image */}
+      <AnimatePresence mode="wait">
+        <motion.img
+          key={activeStage}
+          src={currentStage.image}
+          alt={currentStage.title}
+          initial={{ opacity: 0, scale: 1.05 }}
+          animate={{ opacity: 1, scale: 1 }}
+          exit={{ opacity: 0 }}
+          transition={{ duration: 1.2, ease: "easeOut" }}
+          className="absolute inset-0 w-full h-full object-cover object-center"
+        />
+      </AnimatePresence>
 
-      <div className="section-container pb-16 lg:pb-24">
-        {/* Main Content Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20 items-center mb-16">
-          
-          {/* Left Column: Text (5 cols on lg) */}
-          <div className="lg:col-span-5 flex flex-col justify-center">
-            <AnimatePresence mode="wait">
-              <motion.div
-                key={activeStage}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: -20 }}
-                transition={{ duration: 0.5, ease: "easeOut" }}
-              >
-                {/* Stage icon & label in a row */}
-                <div className="flex items-center gap-4 mb-8">
-                  <div 
-                    className="w-14 h-14 rounded-2xl flex items-center justify-center shadow-lg"
-                    style={{ backgroundColor: `${currentStage.accent}20`, border: `1px solid ${currentStage.accent}40` }}
-                  >
-                    <Icon size={26} color={currentStage.accent} />
-                  </div>
-                  <span 
-                    className="inline-block px-5 py-2 rounded-full text-xs font-body font-bold tracking-widest uppercase shadow-sm"
-                    style={{ backgroundColor: `${currentStage.accent}15`, color: currentStage.accent, border: `1px solid ${currentStage.accent}30` }}
-                  >
-                    Stage 0{currentStage.id}
-                  </span>
+      {/* Dark Overlays for Text Readability */}
+      <div className="absolute inset-0 bg-black/30" /> {/* Base darkness */}
+      <div className="absolute inset-0 bg-gradient-to-r from-charcoal-dark via-charcoal-dark/80 to-transparent w-full md:w-3/4 lg:w-2/3" />
+      <div className="absolute inset-0 bg-gradient-to-t from-charcoal-dark via-charcoal-dark/40 to-transparent sm:hidden" />
+
+      {/* Content Container */}
+      <div className="section-container relative z-10 w-full flex-1 flex flex-col justify-between pt-24 pb-12">
+        
+        {/* Main Content (Vertically Centered) */}
+        <div className="flex-1 flex flex-col justify-center max-w-2xl mt-12 md:mt-20">
+          <AnimatePresence mode="wait">
+            <motion.div
+              key={activeStage}
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -30 }}
+              transition={{ duration: 0.6, ease: "easeOut" }}
+            >
+              {/* Stage icon & label */}
+              <div className="flex items-center gap-4 mb-8">
+                <div 
+                  className="w-14 h-14 rounded-2xl flex items-center justify-center backdrop-blur-md"
+                  style={{ backgroundColor: `${currentStage.accent}30`, border: `1px solid ${currentStage.accent}50` }}
+                >
+                  <Icon size={26} color={currentStage.accent} />
                 </div>
+                <span 
+                  className="inline-block px-5 py-2 rounded-full text-sm font-body font-bold tracking-widest uppercase backdrop-blur-md shadow-lg"
+                  style={{ backgroundColor: `${currentStage.accent}20`, color: currentStage.accent, border: `1px solid ${currentStage.accent}40` }}
+                >
+                  Stage 0{currentStage.id}
+                </span>
+              </div>
 
-                {/* Headline */}
-                <h3 className="font-display text-4xl md:text-5xl lg:text-5xl font-bold text-white mb-6 leading-tight">
-                  {currentStage.headline}
-                </h3>
+              {/* Headline */}
+              <h3 className="font-display text-4xl md:text-5xl lg:text-7xl font-bold text-white mb-6 leading-tight drop-shadow-lg">
+                {currentStage.headline}
+              </h3>
 
-                {/* Description */}
-                <p className="font-body text-lg text-white/70 leading-relaxed">
-                  {currentStage.description}
-                </p>
-              </motion.div>
-            </AnimatePresence>
-          </div>
-
-          {/* Right Column: Image (7 cols on lg) */}
-          <div className="lg:col-span-7 relative">
-            {/* Decorative background glow */}
-            <div 
-              className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full max-w-[600px] blur-[120px] rounded-full pointer-events-none opacity-40 transition-colors duration-1000 hidden md:block"
-              style={{ backgroundColor: currentStage.accent }}
-            />
-            
-            {/* Image Container */}
-            <div className="relative w-full aspect-square md:aspect-[4/3] lg:aspect-square rounded-[2.5rem] overflow-hidden shadow-[0_20px_60px_rgba(0,0,0,0.6)] border border-white/10 group">
-              <AnimatePresence mode="wait">
-                <motion.img
-                  key={activeStage}
-                  src={currentStage.image}
-                  alt={currentStage.title}
-                  initial={{ opacity: 0, scale: 1.05 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  exit={{ opacity: 0 }}
-                  transition={{ duration: 0.7, ease: "easeOut" }}
-                  className="w-full h-full object-cover"
-                />
-              </AnimatePresence>
-              
-              {/* Subtle overlay gradient to make it blend better */}
-              <div className="absolute inset-0 bg-gradient-to-tr from-charcoal-dark/50 via-transparent to-transparent pointer-events-none" />
-            </div>
-          </div>
-
+              {/* Description */}
+              <p className="font-body text-lg md:text-xl text-white/90 leading-relaxed drop-shadow-md">
+                {currentStage.description}
+              </p>
+            </motion.div>
+          </AnimatePresence>
         </div>
 
-        {/* Bottom Navigation / Progress Area (Full Width) */}
-        <div className="flex flex-col md:flex-row items-center justify-between gap-8 pt-8 border-t border-white/10">
+        {/* Bottom Navigation / Progress Area */}
+        <div className="w-full mt-12 flex flex-col md:flex-row items-center justify-between gap-8 pt-8 border-t border-white/20 backdrop-blur-sm rounded-3xl px-2 md:px-6">
           
           {/* Play/Pause Toggle */}
           <button 
             onClick={() => setAutoPlay(!autoPlay)}
-            className="flex items-center gap-3 text-white/50 hover:text-white transition-colors group bg-white/5 hover:bg-white/10 px-6 py-3 rounded-full backdrop-blur-md"
+            className="flex items-center gap-3 text-white/80 hover:text-white transition-colors group bg-black/20 hover:bg-black/40 px-6 py-3 rounded-full backdrop-blur-md"
             title={autoPlay ? "Pause Slideshow" : "Play Slideshow"}
           >
-            {autoPlay ? <Pause size={16} className="group-hover:text-secondary" /> : <Play size={16} className="group-hover:text-secondary" />}
-            <span className="text-sm font-body font-semibold tracking-widest uppercase">
+            {autoPlay ? <Pause size={16} className="text-secondary" /> : <Play size={16} className="text-secondary" />}
+            <span className="text-sm font-body font-semibold tracking-widest uppercase drop-shadow-md">
               {autoPlay ? 'Auto-Playing' : 'Paused'}
             </span>
           </button>
 
           {/* Stage Indicators */}
-          <div className="flex items-center gap-4 lg:gap-6 w-full md:w-auto overflow-x-auto pb-4 md:pb-0 scrollbar-hide">
+          <div className="flex items-center gap-4 lg:gap-8 w-full md:w-auto overflow-x-auto pb-4 md:pb-0 scrollbar-hide">
             {stages.map((stage, i) => (
               <button
                 key={stage.id}
                 onClick={() => {
                   setActiveStage(i);
-                  setAutoPlay(false); // Stop autoplay if user manually clicks
+                  setAutoPlay(false);
                 }}
                 className="relative flex flex-col items-start gap-3 group min-w-[100px]"
               >
-                <span className={`text-xs font-body font-semibold tracking-widest uppercase transition-colors whitespace-nowrap
-                  ${i === activeStage ? 'text-secondary' : 'text-white/40 group-hover:text-white/80'}`}>
+                <span className={`text-sm font-body font-bold tracking-widest uppercase transition-colors whitespace-nowrap drop-shadow-md
+                  ${i === activeStage ? 'text-secondary' : 'text-white/60 group-hover:text-white'}`}>
                   {stage.title}
                 </span>
                 
                 {/* Progress Line */}
-                <div className="w-full h-1.5 bg-white/10 overflow-hidden relative rounded-full">
+                <div className="w-full h-2 bg-black/40 overflow-hidden relative rounded-full backdrop-blur-sm">
                   {i === activeStage && (
                     <motion.div
-                      className="absolute top-0 left-0 h-full bg-secondary shadow-[0_0_10px_rgba(201,168,76,0.5)]"
+                      className="absolute top-0 left-0 h-full bg-secondary shadow-[0_0_10px_rgba(201,168,76,0.8)]"
                       initial={{ width: autoPlay ? "0%" : "100%" }}
                       animate={{ width: "100%" }}
                       transition={{ 
@@ -210,13 +185,15 @@ const StoryJourney = () => {
                     />
                   )}
                   {i < activeStage && (
-                    <div className="absolute top-0 left-0 h-full w-full bg-secondary/50" />
+                    <div className="absolute top-0 left-0 h-full w-full bg-secondary/70" />
                   )}
                 </div>
               </button>
             ))}
           </div>
+          
         </div>
+
       </div>
     </section>
   );
