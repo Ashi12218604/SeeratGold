@@ -6,10 +6,10 @@
 
 @layer base {
   html {
-    scroll-behavior: smooth;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     font-size: 14px;
+    -webkit-tap-highlight-color: transparent;
   }
 
   @media (min-width: 480px) {
