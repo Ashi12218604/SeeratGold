@@ -14,8 +14,8 @@ import { useAppContext } from '../../context/AppContext';
 const FeaturedProducts = () => {
   const { products } = useAppContext();
 
-  // Get only featured products (up to 6)
-  const featuredProducts = products.filter((p) => p.isFeatured).slice(0, 6);
+  // Get only featured products (up to 8)
+  const featuredProducts = products.filter((p) => p.isFeatured).slice(0, 8);
 
   return (
     <section className="section-padding bg-white">
