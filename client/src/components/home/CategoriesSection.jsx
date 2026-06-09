@@ -36,7 +36,7 @@ const CategoriesSection = () => {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.4, delay: index * 0.1 }}
-              className="flex-shrink-0 w-[75vw] snap-center"
+              className="flex-shrink-0 w-[65vw] snap-center"
             >
               <CategoryCard category={category} index={0} />
             </motion.div>

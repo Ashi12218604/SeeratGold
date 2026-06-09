@@ -156,11 +156,11 @@ const HeroSection = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 2.0, duration: 0.6 }}
-                className="flex flex-col sm:flex-row items-center justify-center gap-4"
+                className="flex flex-col sm:flex-row items-center justify-center gap-3"
               >
                 <button
                   onClick={scrollToProducts}
-                  className="btn-gold text-base px-10 py-4 group"
+                  className="btn-gold text-sm md:text-base px-7 py-3 md:px-10 md:py-4 group"
                 >
                   Explore Products
                   <motion.span
@@ -176,9 +176,9 @@ const HeroSection = () => {
                   href={generateWhatsAppURL(WHATSAPP_NUMBER, getGeneralInquiryMessage())}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="btn-whatsapp text-base px-10 py-4"
+                  className="btn-whatsapp text-sm md:text-base px-7 py-3 md:px-10 md:py-4"
                 >
-                  <MessageCircle size={20} />
+                  <MessageCircle size={18} />
                   Order on WhatsApp
                 </a>
               </motion.div>

@@ -41,7 +41,7 @@ const FeaturedProducts = () => {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.4, delay: index * 0.1 }}
-              className="flex-shrink-0 w-[80vw] snap-center"
+              className="flex-shrink-0 w-[68vw] snap-center"
             >
               <ProductCard product={product} />
             </motion.div>

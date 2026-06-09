@@ -45,7 +45,7 @@ const ComboPacks = () => {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.4, delay: index * 0.1 }}
-              className="flex-shrink-0 w-[85vw] snap-center"
+              className="flex-shrink-0 w-[72vw] snap-center"
             >
               <ComboCard combo={combo} index={index} />
             </motion.div>

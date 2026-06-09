@@ -41,7 +41,7 @@ const ProductCard = ({ product }) => {
     >
       {/* Image section */}
       <Link to={`/products/${slug}`} className="block relative overflow-hidden rounded-t-xl">
-        <div className="aspect-square bg-cream/50 overflow-hidden p-6 flex items-center justify-center">
+        <div className="aspect-square bg-cream/50 overflow-hidden p-3 md:p-6 flex items-center justify-center">
           <img
             src={image}
             alt={name}

@@ -54,7 +54,7 @@ const WhySeeratGold = () => {
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 mt-12 items-center">
           {/* Left: Dynamic Image Display */}
-          <div className="lg:col-span-7 relative h-[450px] lg:h-[700px] rounded-[2.5rem] overflow-hidden shadow-2xl group">
+          <div className="lg:col-span-7 relative h-[280px] sm:h-[350px] lg:h-[700px] rounded-[1.5rem] lg:rounded-[2.5rem] overflow-hidden shadow-2xl group">
             {usps.map((usp, i) => {
               const isActive = activeIndex === i;
               return (

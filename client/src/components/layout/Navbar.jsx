@@ -45,10 +45,10 @@ const Navbar = () => {
   return (
     <>
       <nav
-        className={`fixed top-8 left-0 right-0 z-50 transition-all duration-500 ease-premium
+        className={`fixed top-0 md:top-8 left-0 right-0 z-50 transition-all duration-500 ease-premium
           ${isDarkNav
-            ? 'bg-white/95 backdrop-blur-xl shadow-card border-b border-cream-dark/30 py-3'
-            : 'bg-transparent py-5'
+            ? 'bg-white/95 backdrop-blur-xl shadow-card border-b border-cream-dark/30 py-2 md:py-3'
+            : 'bg-transparent py-3 md:py-5'
           }`}
       >
         <div className="section-padding section-container">
@@ -58,7 +58,7 @@ const Navbar = () => {
               <img 
                 src="/images/logo-square.png" 
                 alt="Seerat Gold Logo" 
-                className="h-14 md:h-16 w-auto rounded-lg shadow-md object-contain transition-transform duration-300 group-hover:scale-105" 
+                className="h-10 md:h-16 w-auto rounded-lg shadow-md object-contain transition-transform duration-300 group-hover:scale-105" 
               />
               <span className={`font-body text-[10px] md:text-[11px] mt-1 font-medium tracking-[0.05em] transition-colors duration-300
                 ${isDarkNav ? 'text-primary' : 'text-white'}`}>

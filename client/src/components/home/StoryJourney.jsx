@@ -81,19 +81,19 @@ const StoryJourney = () => {
       
       {/* ---------------- MOBILE LAYOUT ---------------- */}
       {/* Mobile Section Header */}
-      <div className="md:hidden section-container mb-6 text-center z-20">
-        <span className="text-secondary font-body text-xs font-bold tracking-widest uppercase drop-shadow-md">
+      <div className="md:hidden section-container px-3 mb-4 text-center z-20">
+        <span className="text-secondary font-body text-[10px] font-bold tracking-widest uppercase drop-shadow-md">
           Our Journey
         </span>
-        <h2 className="font-display text-3xl font-bold text-white mt-2 drop-shadow-lg">
+        <h2 className="font-display text-2xl font-bold text-white mt-1 drop-shadow-lg">
           From Source to Kitchen
         </h2>
-        <div className="w-12 h-1 bg-gradient-gold mt-3 mx-auto rounded-full" />
+        <div className="w-10 h-0.5 bg-gradient-gold mt-2 mx-auto rounded-full" />
       </div>
 
       {/* Mobile Image Container */}
-      <div className="relative w-full aspect-square sm:aspect-video md:hidden px-4 mb-8 z-20">
-        <div className="w-full h-full relative rounded-3xl overflow-hidden shadow-[0_10px_30px_rgba(0,0,0,0.5)]">
+      <div className="relative w-full aspect-[4/3] sm:aspect-video md:hidden px-3 mb-4 z-20">
+        <div className="w-full h-full relative rounded-xl overflow-hidden shadow-[0_8px_24px_rgba(0,0,0,0.4)]">
           <AnimatePresence mode="wait">
             <motion.img
               key={activeStage}
@@ -159,15 +159,15 @@ const StoryJourney = () => {
               transition={{ duration: 0.6, ease: "easeOut" }}
             >
               {/* Stage icon & label */}
-              <div className="flex items-center gap-3 md:gap-4 mb-4 md:mb-8">
+              <div className="flex items-center gap-2 md:gap-4 mb-3 md:mb-8">
                 <div 
-                  className="w-10 h-10 md:w-14 md:h-14 rounded-xl md:rounded-2xl flex items-center justify-center backdrop-blur-md"
+                  className="w-8 h-8 md:w-14 md:h-14 rounded-lg md:rounded-2xl flex items-center justify-center backdrop-blur-md"
                   style={{ backgroundColor: `${currentStage.accent}30`, border: `1px solid ${currentStage.accent}50` }}
                 >
                   <Icon className="w-5 h-5 md:w-6 md:h-6" color={currentStage.accent} />
                 </div>
                 <span 
-                  className="inline-block px-4 py-1.5 md:px-5 md:py-2 rounded-full text-xs md:text-sm font-body font-bold tracking-widest uppercase backdrop-blur-md shadow-lg"
+                  className="inline-block px-3 py-1 md:px-5 md:py-2 rounded-full text-[10px] md:text-sm font-body font-bold tracking-widest uppercase backdrop-blur-md shadow-lg"
                   style={{ backgroundColor: `${currentStage.accent}20`, color: currentStage.accent, border: `1px solid ${currentStage.accent}40` }}
                 >
                   Stage 0{currentStage.id}
@@ -175,12 +175,12 @@ const StoryJourney = () => {
               </div>
 
               {/* Headline */}
-              <h3 className="font-display text-3xl md:text-5xl lg:text-7xl font-bold text-white mb-3 md:mb-6 leading-tight drop-shadow-lg">
+              <h3 className="font-display text-2xl md:text-5xl lg:text-7xl font-bold text-white mb-2 md:mb-6 leading-tight drop-shadow-lg">
                 {currentStage.headline}
               </h3>
 
               {/* Description */}
-              <p className="font-body text-base md:text-xl text-white/90 leading-relaxed drop-shadow-md">
+              <p className="font-body text-sm md:text-xl text-white/90 leading-relaxed drop-shadow-md">
                 {currentStage.description}
               </p>
             </motion.div>
@@ -188,22 +188,22 @@ const StoryJourney = () => {
         </div>
 
         {/* Bottom Navigation / Progress Area */}
-        <div className="w-full mt-12 flex flex-col md:flex-row items-center justify-between gap-8 pt-8 border-t border-white/20 backdrop-blur-sm rounded-3xl px-2 md:px-6">
+        <div className="w-full mt-6 md:mt-12 flex flex-col md:flex-row items-center justify-between gap-4 md:gap-8 pt-4 md:pt-8 border-t border-white/20 backdrop-blur-sm rounded-xl md:rounded-3xl px-2 md:px-6">
           
           {/* Play/Pause Toggle */}
           <button 
             onClick={() => setAutoPlay(!autoPlay)}
-            className="flex items-center gap-3 text-white/80 hover:text-white transition-colors group bg-black/20 hover:bg-black/40 px-6 py-3 rounded-full backdrop-blur-md"
+            className="flex items-center gap-2 md:gap-3 text-white/80 hover:text-white transition-colors group bg-black/20 hover:bg-black/40 px-4 py-2 md:px-6 md:py-3 rounded-full backdrop-blur-md"
             title={autoPlay ? "Pause Slideshow" : "Play Slideshow"}
           >
             {autoPlay ? <Pause size={16} className="text-secondary" /> : <Play size={16} className="text-secondary" />}
-            <span className="text-sm font-body font-semibold tracking-widest uppercase drop-shadow-md">
+            <span className="text-xs md:text-sm font-body font-semibold tracking-widest uppercase drop-shadow-md">
               {autoPlay ? 'Auto-Playing' : 'Paused'}
             </span>
           </button>
 
           {/* Stage Indicators */}
-          <div className="flex items-center gap-4 lg:gap-8 w-full md:w-auto overflow-x-auto pb-4 md:pb-0 scrollbar-hide">
+          <div className="flex items-center gap-2 md:gap-4 lg:gap-8 w-full md:w-auto overflow-x-auto pb-2 md:pb-0 scrollbar-hide">
             {stages.map((stage, i) => (
               <button
                 key={stage.id}
@@ -211,15 +211,15 @@ const StoryJourney = () => {
                   setActiveStage(i);
                   setAutoPlay(false);
                 }}
-                className="relative flex flex-col items-start gap-3 group min-w-[100px]"
+                className="relative flex flex-col items-start gap-1.5 md:gap-3 group min-w-[70px] md:min-w-[100px]"
               >
-                <span className={`text-sm font-body font-bold tracking-widest uppercase transition-colors whitespace-nowrap drop-shadow-md
+                <span className={`text-[10px] md:text-sm font-body font-bold tracking-widest uppercase transition-colors whitespace-nowrap drop-shadow-md
                   ${i === activeStage ? 'text-secondary' : 'text-white/60 group-hover:text-white'}`}>
                   {stage.title}
                 </span>
                 
                 {/* Progress Line */}
-                <div className="w-full h-2 bg-black/40 overflow-hidden relative rounded-full backdrop-blur-sm">
+                <div className="w-full h-1 md:h-2 bg-black/40 overflow-hidden relative rounded-full backdrop-blur-sm">
                   {i === activeStage && (
                     <motion.div
                       className="absolute top-0 left-0 h-full bg-secondary shadow-[0_0_10px_rgba(201,168,76,0.8)]"
