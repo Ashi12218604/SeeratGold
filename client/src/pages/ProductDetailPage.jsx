@@ -108,11 +108,11 @@ const ProductDetailPage = () => {
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6 }}
             >
-              <div className="aspect-square rounded-2xl overflow-hidden bg-white shadow-card">
+              <div className="aspect-square rounded-2xl overflow-hidden bg-white shadow-card p-12 flex items-center justify-center">
                 <img
                   src={product.image}
                   alt={product.name}
-                  className="w-full h-full object-cover"
+                  className="max-h-full max-w-full object-contain"
                 />
               </div>
 

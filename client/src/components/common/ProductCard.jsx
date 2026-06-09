@@ -41,11 +41,11 @@ const ProductCard = ({ product }) => {
     >
       {/* Image section */}
       <Link to={`/products/${slug}`} className="block relative overflow-hidden rounded-t-xl">
-        <div className="aspect-square bg-cream/50 overflow-hidden">
+        <div className="aspect-square bg-cream/50 overflow-hidden p-6 flex items-center justify-center">
           <img
             src={image}
             alt={name}
-            className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+            className="max-h-full max-w-full object-contain transition-transform duration-500 group-hover:scale-110"
             loading="lazy"
           />
         </div>

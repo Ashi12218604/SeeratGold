@@ -20,8 +20,8 @@ const CategoriesSection = () => {
           subtitle="Explore our carefully curated categories of premium spices, each sourced from the finest growing regions."
         />
 
-        {/* Desktop: 2x4 grid, Tablet: 2 cols, Mobile: horizontal scroll */}
-        <div className="hidden md:grid md:grid-cols-2 lg:grid-cols-4 gap-5 lg:gap-6">
+        {/* Desktop: 2x2 grid, Tablet: 2 cols, Mobile: horizontal scroll */}
+        <div className="hidden md:grid md:grid-cols-2 gap-5 lg:gap-6">
           {categories.map((category, index) => (
             <CategoryCard key={category.id} category={category} index={index} />
           ))}

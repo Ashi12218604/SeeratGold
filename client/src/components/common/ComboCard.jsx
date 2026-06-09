@@ -20,7 +20,7 @@ const ComboCard = ({ combo, index = 0 }) => {
       className="card-base overflow-hidden group"
     >
       {/* Card top - Image */}
-      <div className="relative overflow-hidden aspect-video sm:aspect-[16/10] bg-primary/5">
+      <div className="relative overflow-hidden h-40 sm:h-48 bg-primary/5">
         <img
           src={image}
           alt={name}
