@@ -77,7 +77,7 @@ const StoryJourney = () => {
   const Icon = currentStage.icon;
 
   return (
-    <section id="story-section" className="relative w-full min-h-screen flex flex-col bg-charcoal-dark overflow-hidden">
+    <section id="story-section" className="relative w-full min-h-[100dvh] flex flex-col bg-charcoal-dark overflow-hidden">
       
       {/* Full Page Background Image */}
       <AnimatePresence mode="wait">
@@ -97,22 +97,22 @@ const StoryJourney = () => {
       <div className="absolute top-0 left-0 w-full h-32 md:h-64 bg-gradient-to-b from-charcoal-dark via-charcoal-dark/90 to-transparent z-10 pointer-events-none" />
 
       {/* Dark Overlays for Text Readability */}
-      <div className="absolute inset-0 bg-black/30 pointer-events-none" /> {/* Base darkness */}
-      <div className="absolute inset-0 bg-gradient-to-r from-charcoal-dark via-charcoal-dark/80 to-transparent w-full md:w-3/4 lg:w-2/3 pointer-events-none" />
-      <div className="absolute inset-0 bg-gradient-to-t from-charcoal-dark via-charcoal-dark/40 to-transparent sm:hidden pointer-events-none" />
+      <div className="absolute inset-0 bg-black/50 md:bg-black/30 pointer-events-none" /> {/* Base darkness */}
+      <div className="absolute inset-0 bg-gradient-to-t from-charcoal-dark via-charcoal-dark/80 to-transparent md:hidden pointer-events-none" />
+      <div className="hidden md:block absolute inset-0 bg-gradient-to-r from-charcoal-dark via-charcoal-dark/80 to-transparent w-3/4 lg:w-2/3 pointer-events-none" />
 
       {/* Content Container */}
-      <div className="section-container relative z-20 w-full flex-1 flex flex-col pt-16 lg:pt-24 pb-12">
+      <div className="section-container relative z-20 w-full flex-1 flex flex-col pt-16 lg:pt-24 pb-8 md:pb-12">
         
         {/* Section Header */}
-        <div className="w-full mb-8 md:mb-12">
+        <div className="w-full mb-6 md:mb-12">
           <span className="text-secondary font-body text-xs font-bold tracking-widest uppercase drop-shadow-md">
             Our Journey
           </span>
-          <h2 className="font-display text-3xl md:text-4xl font-bold text-white mt-2 drop-shadow-lg">
+          <h2 className="font-display text-2xl md:text-4xl font-bold text-white mt-1 md:mt-2 drop-shadow-lg">
             From Source to Kitchen
           </h2>
-          <div className="w-12 h-1 bg-gradient-gold mt-4 rounded-full" />
+          <div className="w-12 h-1 bg-gradient-gold mt-3 md:mt-4 rounded-full" />
         </div>
 
         {/* Main Content (Vertically Centered) */}
@@ -120,21 +120,21 @@ const StoryJourney = () => {
           <AnimatePresence mode="wait">
             <motion.div
               key={activeStage}
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -30 }}
+              exit={{ opacity: 0, y: -20 }}
               transition={{ duration: 0.6, ease: "easeOut" }}
             >
               {/* Stage icon & label */}
-              <div className="flex items-center gap-4 mb-8">
+              <div className="flex items-center gap-3 md:gap-4 mb-4 md:mb-8">
                 <div 
-                  className="w-14 h-14 rounded-2xl flex items-center justify-center backdrop-blur-md"
+                  className="w-10 h-10 md:w-14 md:h-14 rounded-xl md:rounded-2xl flex items-center justify-center backdrop-blur-md"
                   style={{ backgroundColor: `${currentStage.accent}30`, border: `1px solid ${currentStage.accent}50` }}
                 >
-                  <Icon size={26} color={currentStage.accent} />
+                  <Icon className="w-5 h-5 md:w-6 md:h-6" color={currentStage.accent} />
                 </div>
                 <span 
-                  className="inline-block px-5 py-2 rounded-full text-sm font-body font-bold tracking-widest uppercase backdrop-blur-md shadow-lg"
+                  className="inline-block px-4 py-1.5 md:px-5 md:py-2 rounded-full text-xs md:text-sm font-body font-bold tracking-widest uppercase backdrop-blur-md shadow-lg"
                   style={{ backgroundColor: `${currentStage.accent}20`, color: currentStage.accent, border: `1px solid ${currentStage.accent}40` }}
                 >
                   Stage 0{currentStage.id}
@@ -142,12 +142,12 @@ const StoryJourney = () => {
               </div>
 
               {/* Headline */}
-              <h3 className="font-display text-4xl md:text-5xl lg:text-7xl font-bold text-white mb-6 leading-tight drop-shadow-lg">
+              <h3 className="font-display text-3xl md:text-5xl lg:text-7xl font-bold text-white mb-3 md:mb-6 leading-tight drop-shadow-lg">
                 {currentStage.headline}
               </h3>
 
               {/* Description */}
-              <p className="font-body text-lg md:text-xl text-white/90 leading-relaxed drop-shadow-md">
+              <p className="font-body text-base md:text-xl text-white/90 leading-relaxed drop-shadow-md">
                 {currentStage.description}
               </p>
             </motion.div>
