@@ -102,9 +102,9 @@ const Navbar = () => {
                 href={generateWhatsAppURL(WHATSAPP_NUMBER, getGeneralInquiryMessage())}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="btn-whatsapp text-sm px-5 py-2.5"
+                className="btn-whatsapp text-base px-5 py-2.5"
               >
-                <MessageCircle size={16} />
+                <MessageCircle size={18} />
                 WhatsApp
               </a>
             </div>
