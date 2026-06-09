@@ -77,42 +77,75 @@ const StoryJourney = () => {
   const Icon = currentStage.icon;
 
   return (
-    <section id="story-section" className="relative w-full min-h-[100dvh] flex flex-col bg-charcoal-dark overflow-hidden">
+    <section id="story-section" className="relative w-full md:min-h-screen flex flex-col bg-charcoal-dark overflow-hidden pt-12 md:pt-0">
       
-      {/* Full Page Background Image */}
-      <AnimatePresence mode="wait">
-        <motion.img
-          key={activeStage}
-          src={currentStage.image}
-          alt={currentStage.title}
-          initial={{ opacity: 0, scale: 1.05 }}
-          animate={{ opacity: 1, scale: 1 }}
-          exit={{ opacity: 0 }}
-          transition={{ duration: 1.2, ease: "easeOut" }}
-          className="absolute inset-0 w-full h-full object-cover object-center"
-        />
-      </AnimatePresence>
+      {/* ---------------- MOBILE LAYOUT ---------------- */}
+      {/* Mobile Section Header */}
+      <div className="md:hidden section-container mb-6 text-center z-20">
+        <span className="text-secondary font-body text-xs font-bold tracking-widest uppercase drop-shadow-md">
+          Our Journey
+        </span>
+        <h2 className="font-display text-3xl font-bold text-white mt-2 drop-shadow-lg">
+          From Source to Kitchen
+        </h2>
+        <div className="w-12 h-1 bg-gradient-gold mt-3 mx-auto rounded-full" />
+      </div>
 
-      {/* Smooth Transition Top Gradient to hide hard edges */}
-      <div className="absolute top-0 left-0 w-full h-32 md:h-64 bg-gradient-to-b from-charcoal-dark via-charcoal-dark/90 to-transparent z-10 pointer-events-none" />
+      {/* Mobile Image Container */}
+      <div className="relative w-full aspect-square sm:aspect-video md:hidden px-4 mb-8 z-20">
+        <div className="w-full h-full relative rounded-3xl overflow-hidden shadow-[0_10px_30px_rgba(0,0,0,0.5)]">
+          <AnimatePresence mode="wait">
+            <motion.img
+              key={activeStage}
+              src={currentStage.image}
+              alt={currentStage.title}
+              initial={{ opacity: 0, scale: 1.05 }}
+              animate={{ opacity: 1, scale: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.8 }}
+              className="absolute inset-0 w-full h-full object-cover object-center"
+            />
+          </AnimatePresence>
+          {/* Subtle fade at the bottom of the mobile image */}
+          <div className="absolute inset-0 bg-gradient-to-t from-charcoal-dark/80 via-transparent to-transparent" />
+        </div>
+      </div>
 
-      {/* Dark Overlays for Text Readability */}
-      <div className="absolute inset-0 bg-black/50 md:bg-black/30 pointer-events-none" /> {/* Base darkness */}
-      <div className="absolute inset-0 bg-gradient-to-t from-charcoal-dark via-charcoal-dark/80 to-transparent md:hidden pointer-events-none" />
-      <div className="hidden md:block absolute inset-0 bg-gradient-to-r from-charcoal-dark via-charcoal-dark/80 to-transparent w-3/4 lg:w-2/3 pointer-events-none" />
-
-      {/* Content Container */}
-      <div className="section-container relative z-20 w-full flex-1 flex flex-col pt-16 lg:pt-24 pb-8 md:pb-12">
+      {/* ---------------- DESKTOP LAYOUT ---------------- */}
+      <div className="hidden md:block absolute inset-0 z-0">
+        <AnimatePresence mode="wait">
+          <motion.img
+            key={activeStage}
+            src={currentStage.image}
+            alt={currentStage.title}
+            initial={{ opacity: 0, scale: 1.05 }}
+            animate={{ opacity: 1, scale: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 1.2, ease: "easeOut" }}
+            className="absolute inset-0 w-full h-full object-cover object-center"
+          />
+        </AnimatePresence>
         
-        {/* Section Header */}
-        <div className="w-full mb-6 md:mb-12">
+        {/* Dark Overlays for Text Readability on Desktop */}
+        <div className="absolute inset-0 bg-black/30 pointer-events-none" />
+        <div className="absolute inset-0 bg-gradient-to-r from-charcoal-dark via-charcoal-dark/80 to-transparent w-3/4 lg:w-2/3 pointer-events-none" />
+      </div>
+
+      {/* Smooth Transition Top Gradient (Desktop only) */}
+      <div className="hidden md:block absolute top-0 left-0 w-full h-32 md:h-64 bg-gradient-to-b from-charcoal-dark via-charcoal-dark/90 to-transparent z-10 pointer-events-none" />
+
+      {/* Content Container (Shared) */}
+      <div className="section-container relative z-20 w-full flex-1 flex flex-col pt-0 md:pt-24 pb-8 md:pb-12">
+        
+        {/* Desktop Section Header (Hidden on Mobile) */}
+        <div className="hidden md:block w-full mb-12">
           <span className="text-secondary font-body text-xs font-bold tracking-widest uppercase drop-shadow-md">
             Our Journey
           </span>
-          <h2 className="font-display text-2xl md:text-4xl font-bold text-white mt-1 md:mt-2 drop-shadow-lg">
+          <h2 className="font-display text-4xl font-bold text-white mt-2 drop-shadow-lg">
             From Source to Kitchen
           </h2>
-          <div className="w-12 h-1 bg-gradient-gold mt-3 md:mt-4 rounded-full" />
+          <div className="w-12 h-1 bg-gradient-gold mt-4 rounded-full" />
         </div>
 
         {/* Main Content (Vertically Centered) */}
