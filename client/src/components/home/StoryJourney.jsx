@@ -92,124 +92,121 @@ const StoryJourney = () => {
         </div>
       </div>
 
-      <div className="relative w-full overflow-hidden bg-charcoal h-[650px] lg:h-[750px] flex">
-        
-        {/* Background Image Carousel */}
-        <div className="absolute inset-0 w-full h-full">
-          <AnimatePresence initial={false}>
-            <motion.img
-              key={activeStage}
-              src={currentStage.image}
-              alt={currentStage.title}
-              initial={{ opacity: 0, scale: 1.05 }}
-              animate={{ opacity: 1, scale: 1 }}
-              exit={{ opacity: 0 }}
-              transition={{ duration: 1, ease: 'easeInOut' }}
-              className="absolute inset-0 w-full h-full object-cover"
-            />
-          </AnimatePresence>
-          {/* Dark/Color Overlay for text readability */}
-          <div className="absolute inset-0 bg-gradient-to-r from-charcoal-dark/95 via-charcoal-dark/70 to-transparent" />
-        </div>
-
-        {/* Content Container (Constrained) */}
-        <div className="section-container relative z-10 w-full h-full flex flex-col justify-between pointer-events-none">
+      <div className="section-container pb-16 lg:pb-24">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-center">
           
-          {/* Top spacer */}
-          <div className="h-8 lg:h-16" />
-
-          {/* Content Area */}
-          <div className="w-full lg:w-1/2 flex flex-col justify-center pointer-events-auto">
-            <AnimatePresence mode="wait">
-              <motion.div
-                key={activeStage}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: -20 }}
-                transition={{ duration: 0.5, ease: "easeOut" }}
-              >
-                {/* Stage icon */}
-                <div 
-                  className="w-14 h-14 rounded-2xl flex items-center justify-center mb-6"
-                  style={{ backgroundColor: `${currentStage.accent}30` }}
+          {/* Left Column: Text & Navigation (7 cols on lg) */}
+          <div className="lg:col-span-7 flex flex-col justify-between min-h-[480px]">
+            {/* Content Area */}
+            <div className="w-full py-4">
+              <AnimatePresence mode="wait">
+                <motion.div
+                  key={activeStage}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: -20 }}
+                  transition={{ duration: 0.5, ease: "easeOut" }}
                 >
-                  <Icon size={28} color={currentStage.accent} />
-                </div>
-
-                {/* Stage label */}
-                <span 
-                  className="inline-block px-4 py-1.5 rounded-full text-xs font-body font-semibold tracking-widest uppercase mb-4"
-                  style={{ backgroundColor: `${currentStage.accent}25`, color: currentStage.accent }}
-                >
-                  Stage 0{currentStage.id}
-                </span>
-
-                {/* Headline */}
-                <h3 className="font-display text-4xl lg:text-5xl lg:leading-[1.1] font-bold text-white mb-6">
-                  {currentStage.headline}
-                </h3>
-
-                {/* Description */}
-                <p className="font-body text-lg text-white/80 leading-relaxed max-w-md">
-                  {currentStage.description}
-                </p>
-              </motion.div>
-            </AnimatePresence>
-          </div>
-
-          {/* Navigation/Progress Area */}
-          <div className="w-full pb-8 lg:pb-12 pt-8 flex items-end justify-between pointer-events-auto mt-auto">
-            
-            {/* Play/Pause Toggle */}
-            <button 
-              onClick={() => setAutoPlay(!autoPlay)}
-              className="flex items-center gap-2 text-white/50 hover:text-white transition-colors group bg-black/20 px-4 py-2 rounded-full backdrop-blur-md"
-              title={autoPlay ? "Pause Slideshow" : "Play Slideshow"}
-            >
-              {autoPlay ? <Pause size={14} className="group-hover:text-secondary" /> : <Play size={14} className="group-hover:text-secondary" />}
-              <span className="text-xs font-body tracking-widest uppercase hidden sm:block">
-                {autoPlay ? 'Auto' : 'Paused'}
-              </span>
-            </button>
-
-            {/* Stage Indicators */}
-            <div className="flex items-center gap-2 lg:gap-4">
-              {stages.map((stage, i) => (
-                <button
-                  key={stage.id}
-                  onClick={() => {
-                    setActiveStage(i);
-                    setAutoPlay(false); // Stop autoplay if user manually clicks
-                  }}
-                  className="relative flex flex-col items-center gap-2 group"
-                >
-                  <span className={`text-[10px] font-body tracking-widest uppercase hidden lg:block transition-colors
-                    ${i === activeStage ? 'text-secondary' : 'text-white/40 group-hover:text-white/70'}`}>
-                    {stage.title}
-                  </span>
-                  
-                  {/* Progress Line */}
-                  <div className="w-10 lg:w-16 h-1.5 rounded-full bg-white/20 overflow-hidden relative">
-                    {i === activeStage && (
-                      <motion.div
-                        className="absolute top-0 left-0 h-full bg-secondary"
-                        initial={{ width: autoPlay ? "0%" : "100%" }}
-                        animate={{ width: "100%" }}
-                        transition={{ 
-                          duration: autoPlay ? 6 : 0, 
-                          ease: "linear" 
-                        }}
-                      />
-                    )}
-                    {i < activeStage && (
-                      <div className="absolute top-0 left-0 h-full w-full bg-secondary/50" />
-                    )}
+                  {/* Stage icon & label in a row */}
+                  <div className="flex items-center gap-4 mb-6">
+                    <div 
+                      className="w-12 h-12 rounded-xl flex items-center justify-center"
+                      style={{ backgroundColor: `${currentStage.accent}30` }}
+                    >
+                      <Icon size={24} color={currentStage.accent} />
+                    </div>
+                    <span 
+                      className="inline-block px-4 py-1.5 rounded-full text-xs font-body font-semibold tracking-widest uppercase"
+                      style={{ backgroundColor: `${currentStage.accent}25`, color: currentStage.accent }}
+                    >
+                      Stage 0{currentStage.id}
+                    </span>
                   </div>
-                </button>
-              ))}
+
+                  {/* Headline */}
+                  <h3 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4 lg:mb-6 leading-tight">
+                    {currentStage.headline}
+                  </h3>
+
+                  {/* Description */}
+                  <p className="font-body text-base md:text-lg text-white/80 leading-relaxed max-w-xl">
+                    {currentStage.description}
+                  </p>
+                </motion.div>
+              </AnimatePresence>
             </div>
-            
+
+            {/* Navigation/Progress Area */}
+            <div className="w-full pt-8 flex items-center justify-between">
+              {/* Play/Pause Toggle */}
+              <button 
+                onClick={() => setAutoPlay(!autoPlay)}
+                className="flex items-center gap-2 text-white/50 hover:text-white transition-colors group bg-white/5 px-4 py-2 rounded-full backdrop-blur-md"
+                title={autoPlay ? "Pause Slideshow" : "Play Slideshow"}
+              >
+                {autoPlay ? <Pause size={14} className="group-hover:text-secondary" /> : <Play size={14} className="group-hover:text-secondary" />}
+                <span className="text-xs font-body tracking-widest uppercase hidden sm:block">
+                  {autoPlay ? 'Auto' : 'Paused'}
+                </span>
+              </button>
+
+              {/* Stage Indicators */}
+              <div className="flex items-center gap-2 lg:gap-3">
+                {stages.map((stage, i) => (
+                  <button
+                    key={stage.id}
+                    onClick={() => {
+                      setActiveStage(i);
+                      setAutoPlay(false); // Stop autoplay if user manually clicks
+                    }}
+                    className="relative flex flex-col items-center gap-2 group"
+                  >
+                    <span className={`text-[10px] font-body tracking-widest uppercase hidden md:block transition-colors
+                      ${i === activeStage ? 'text-secondary' : 'text-white/40 group-hover:text-white/70'}`}>
+                      {stage.title}
+                    </span>
+                    
+                    {/* Progress Line */}
+                    <div className="w-8 lg:w-14 h-1.5 bg-white/20 overflow-hidden relative rounded-full">
+                      {i === activeStage && (
+                        <motion.div
+                          className="absolute top-0 left-0 h-full bg-secondary"
+                          initial={{ width: autoPlay ? "0%" : "100%" }}
+                          animate={{ width: "100%" }}
+                          transition={{ 
+                            duration: autoPlay ? 6 : 0, 
+                            ease: "linear" 
+                          }}
+                        />
+                      )}
+                      {i < activeStage && (
+                        <div className="absolute top-0 left-0 h-full w-full bg-secondary/50" />
+                      )}
+                    </div>
+                  </button>
+                ))}
+              </div>
+            </div>
           </div>
+
+          {/* Right Column: Image (5 cols on lg) */}
+          <div className="lg:col-span-5 flex justify-center items-center mt-8 lg:mt-0">
+            <div className="relative w-full max-w-[450px] aspect-square rounded-3xl overflow-hidden shadow-2xl border-4 border-white/5 bg-charcoal/20">
+              <AnimatePresence mode="wait">
+                <motion.img
+                  key={activeStage}
+                  src={currentStage.image}
+                  alt={currentStage.title}
+                  initial={{ opacity: 0, scale: 0.95 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  exit={{ opacity: 0, scale: 1.05 }}
+                  transition={{ duration: 0.5 }}
+                  className="w-full h-full object-cover"
+                />
+              </AnimatePresence>
+            </div>
+          </div>
+
         </div>
       </div>
     </section>
