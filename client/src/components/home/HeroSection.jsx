@@ -2,17 +2,18 @@ import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { MessageCircle, ChevronDown } from 'lucide-react';
 import { generateWhatsAppURL, getGeneralInquiryMessage, WHATSAPP_NUMBER } from '../../utils/whatsapp';
+import { useNavigate, Link } from 'react-router-dom';
 
 const HeroSection = () => {
   const [isLoaded, setIsLoaded] = useState(false);
+  const navigate = useNavigate();
 
   useEffect(() => {
     setIsLoaded(true);
   }, []);
 
   const scrollToProducts = () => {
-    const el = document.getElementById('categories-section');
-    if (el) el.scrollIntoView({ behavior: 'smooth' });
+    navigate('/products');
   };
 
   const scrollToStory = () => {
@@ -158,9 +159,9 @@ const HeroSection = () => {
                 transition={{ delay: 2.0, duration: 0.6 }}
                 className="flex flex-col sm:flex-row items-center justify-center gap-3"
               >
-                <button
-                  onClick={scrollToProducts}
-                  className="btn-gold text-sm md:text-base px-7 py-3 md:px-10 md:py-4 group"
+                <Link
+                  to="/products"
+                  className="btn-gold text-sm md:text-base px-7 py-3 md:px-10 md:py-4 group flex items-center gap-2"
                 >
                   Explore Products
                   <motion.span
@@ -170,7 +171,7 @@ const HeroSection = () => {
                   >
                     →
                   </motion.span>
-                </button>
+                </Link>
 
                 <a
                   href={generateWhatsAppURL(WHATSAPP_NUMBER, getGeneralInquiryMessage())}

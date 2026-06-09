@@ -25,26 +25,10 @@ const FeaturedProducts = () => {
           subtitle="Handpicked favorites loved by home chefs across India."
         />
 
-        {/* Desktop grid */}
-        <div className="hidden md:grid md:grid-cols-2 lg:grid-cols-4 gap-5 lg:gap-6">
+        {/* Unified grid */}
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 md:gap-5 lg:gap-6">
           {featuredProducts.map((product) => (
             <ProductCard key={product.id} product={product} />
-          ))}
-        </div>
-
-        {/* Mobile carousel */}
-        <div className="md:hidden flex gap-4 overflow-x-auto pb-6 -mx-4 px-4 snap-x snap-mandatory scrollbar-hide">
-          {featuredProducts.map((product, index) => (
-            <motion.div
-              key={product.id}
-              initial={{ opacity: 0, x: 30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.4, delay: index * 0.1 }}
-              className="flex-shrink-0 w-[68vw] snap-center"
-            >
-              <ProductCard product={product} />
-            </motion.div>
           ))}
         </div>
 

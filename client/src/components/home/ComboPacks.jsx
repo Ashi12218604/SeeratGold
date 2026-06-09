@@ -29,26 +29,10 @@ const ComboPacks = () => {
           light
         />
 
-        {/* Desktop grid */}
-        <div className="hidden md:grid md:grid-cols-3 gap-6 lg:gap-8">
+        {/* Unified grid */}
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-6 lg:gap-8">
           {combos.map((combo, index) => (
             <ComboCard key={combo.id} combo={combo} index={index} />
-          ))}
-        </div>
-
-        {/* Mobile carousel */}
-        <div className="md:hidden flex gap-4 overflow-x-auto pb-6 -mx-4 px-4 snap-x snap-mandatory scrollbar-hide">
-          {combos.map((combo, index) => (
-            <motion.div
-              key={combo.id}
-              initial={{ opacity: 0, x: 30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.4, delay: index * 0.1 }}
-              className="flex-shrink-0 w-[72vw] snap-center"
-            >
-              <ComboCard combo={combo} index={index} />
-            </motion.div>
           ))}
         </div>
 
