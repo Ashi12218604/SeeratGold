@@ -26,7 +26,7 @@
 
   @media (min-width: 1024px) {
     html {
-      font-size: 17px;
+      font-size: 17.5px;
     }
   }
 
@@ -64,7 +64,7 @@
 
 @layer components {
   .section-padding {
-    @apply px-3 sm:px-5 md:px-6 lg:px-8 xl:px-16 2xl:px-24 py-10 md:py-14 lg:py-20;
+    @apply px-3 sm:px-5 md:px-6 lg:px-8 xl:px-16 2xl:px-24;
   }
 
   .section-container {
