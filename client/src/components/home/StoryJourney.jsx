@@ -93,16 +93,30 @@ const StoryJourney = () => {
         />
       </AnimatePresence>
 
+      {/* Smooth Transition Top Gradient to hide hard edges */}
+      <div className="absolute top-0 left-0 w-full h-32 md:h-64 bg-gradient-to-b from-charcoal-dark via-charcoal-dark/90 to-transparent z-10 pointer-events-none" />
+
       {/* Dark Overlays for Text Readability */}
-      <div className="absolute inset-0 bg-black/30" /> {/* Base darkness */}
-      <div className="absolute inset-0 bg-gradient-to-r from-charcoal-dark via-charcoal-dark/80 to-transparent w-full md:w-3/4 lg:w-2/3" />
-      <div className="absolute inset-0 bg-gradient-to-t from-charcoal-dark via-charcoal-dark/40 to-transparent sm:hidden" />
+      <div className="absolute inset-0 bg-black/30 pointer-events-none" /> {/* Base darkness */}
+      <div className="absolute inset-0 bg-gradient-to-r from-charcoal-dark via-charcoal-dark/80 to-transparent w-full md:w-3/4 lg:w-2/3 pointer-events-none" />
+      <div className="absolute inset-0 bg-gradient-to-t from-charcoal-dark via-charcoal-dark/40 to-transparent sm:hidden pointer-events-none" />
 
       {/* Content Container */}
-      <div className="section-container relative z-10 w-full flex-1 flex flex-col justify-between pt-24 pb-12">
+      <div className="section-container relative z-20 w-full flex-1 flex flex-col pt-16 lg:pt-24 pb-12">
         
+        {/* Section Header */}
+        <div className="w-full mb-8 md:mb-12">
+          <span className="text-secondary font-body text-xs font-bold tracking-widest uppercase drop-shadow-md">
+            Our Journey
+          </span>
+          <h2 className="font-display text-3xl md:text-4xl font-bold text-white mt-2 drop-shadow-lg">
+            From Source to Kitchen
+          </h2>
+          <div className="w-12 h-1 bg-gradient-gold mt-4 rounded-full" />
+        </div>
+
         {/* Main Content (Vertically Centered) */}
-        <div className="flex-1 flex flex-col justify-center max-w-2xl mt-12 md:mt-20">
+        <div className="flex-1 flex flex-col justify-center max-w-2xl">
           <AnimatePresence mode="wait">
             <motion.div
               key={activeStage}
