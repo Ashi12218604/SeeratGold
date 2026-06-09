@@ -106,7 +106,7 @@ const HeroSection = () => {
               </motion.div>
 
               {/* Main Headline - Letter by letter animation */}
-              <h1 className="font-display text-5xl sm:text-6xl md:text-display-xl font-bold text-white mb-6 leading-tight">
+              <h1 className="font-display text-4xl sm:text-5xl md:text-display-xl font-bold text-white mb-4 md:mb-6 leading-tight">
                 {headlineLetters.map((letter, i) => (
                   <motion.span
                     key={i}
@@ -127,7 +127,7 @@ const HeroSection = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 1.2, duration: 0.8 }}
-                className="font-body text-xl sm:text-2xl text-cream/90 mb-4 font-light tracking-wide"
+                className="font-body text-lg sm:text-xl md:text-2xl text-cream/90 mb-3 md:mb-4 font-light tracking-wide"
               >
                 Pure by Origin. Rich by Nature.
               </motion.p>
@@ -137,7 +137,7 @@ const HeroSection = () => {
                 initial={{ scaleX: 0 }}
                 animate={{ scaleX: 1 }}
                 transition={{ delay: 1.5, duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
-                className="w-24 h-1 bg-gradient-gold mx-auto mb-8 rounded-full"
+                className="w-16 md:w-24 h-1 bg-gradient-gold mx-auto mb-6 md:mb-8 rounded-full"
               />
 
               {/* Sub-message */}
@@ -145,7 +145,7 @@ const HeroSection = () => {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 1.8, duration: 0.8 }}
-                className="font-body text-base sm:text-lg text-cream-dark/80 mb-10 max-w-2xl mx-auto"
+                className="font-body text-sm sm:text-base md:text-lg text-cream-dark/80 mb-8 md:mb-10 max-w-2xl mx-auto px-4 md:px-0"
               >
                 Sourced from their native regions, carefully processed, and delivered 
                 with their original taste intact.

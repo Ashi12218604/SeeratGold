@@ -77,9 +77,9 @@ const WhySeeratGold = () => {
                   {/* Premium dark gradient overlay */}
                   <div className="absolute inset-0 bg-gradient-to-t from-primary-900/90 via-primary-900/20 to-transparent" />
                   
-                  <div className="absolute bottom-10 left-10 right-10 text-white">
-                    <usp.icon size={56} className="text-secondary mb-4 opacity-90" strokeWidth={1.5} />
-                    <h3 className="font-display text-4xl md:text-5xl font-bold mb-2 drop-shadow-md">
+                  <div className="absolute bottom-6 left-6 right-6 md:bottom-10 md:left-10 md:right-10 text-white">
+                    <usp.icon className="w-10 h-10 md:w-14 md:h-14 text-secondary mb-3 md:mb-4 opacity-90" strokeWidth={1.5} />
+                    <h3 className="font-display text-2xl sm:text-3xl md:text-5xl font-bold mb-2 drop-shadow-md">
                       {usp.title}
                     </h3>
                   </div>
