@@ -14,8 +14,8 @@ import { useAppContext } from '../../context/AppContext';
 const FeaturedProducts = () => {
   const { products } = useAppContext();
 
-  // Get only featured products (up to 9)
-  const featuredProducts = products.filter((p) => p.isFeatured).slice(0, 9);
+  // Get only featured products (up to 16 for a 4x4 grid)
+  const featuredProducts = products.filter((p) => p.isFeatured).slice(0, 16);
 
   return (
     <section className="section-padding bg-white">
@@ -26,7 +26,7 @@ const FeaturedProducts = () => {
         />
 
         {/* Desktop grid */}
-        <div className="hidden md:grid md:grid-cols-2 lg:grid-cols-3 gap-5 lg:gap-6">
+        <div className="hidden md:grid md:grid-cols-2 lg:grid-cols-4 gap-5 lg:gap-6">
           {featuredProducts.map((product) => (
             <ProductCard key={product.id} product={product} />
           ))}
