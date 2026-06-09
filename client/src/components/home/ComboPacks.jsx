@@ -30,7 +30,7 @@ const ComboPacks = () => {
         />
 
         {/* Desktop grid */}
-        <div className="hidden md:grid md:grid-cols-2 gap-6 lg:gap-8">
+        <div className="hidden md:grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
           {combos.map((combo, index) => (
             <ComboCard key={combo.id} combo={combo} index={index} />
           ))}

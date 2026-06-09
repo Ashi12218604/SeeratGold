@@ -20,7 +20,7 @@ const CategoryCard = ({ category, index = 0 }) => {
     >
       <Link
         to={`/category/${slug}`}
-        className="group block relative overflow-hidden rounded-2xl h-64 md:h-72 shadow-card hover:shadow-gold transition-shadow duration-500"
+        className="group block relative overflow-hidden rounded-2xl h-56 md:h-64 shadow-card hover:shadow-gold transition-shadow duration-500"
       >
         {/* Background image with zoom on hover */}
         <div className="absolute inset-0">
