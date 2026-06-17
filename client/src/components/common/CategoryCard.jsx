@@ -45,9 +45,6 @@ const CategoryCard = ({ category, index = 0 }) => {
               <h3 className="font-display text-xl md:text-2xl font-bold text-cream mb-1">
                 {name}
               </h3>
-              <p className="text-cream/60 text-sm font-body">
-                {productCount || 0} {productCount === 1 ? 'Product' : 'Products'}
-              </p>
             </div>
 
             {/* Arrow indicator */}
