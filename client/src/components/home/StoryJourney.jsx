@@ -159,7 +159,7 @@ const StoryJourney = () => {
           <span className="text-secondary font-body text-xs font-bold tracking-widest uppercase drop-shadow-md">
             Our Journey
           </span>
-          <h2 className="font-display text-3xl font-bold text-white mt-2 drop-shadow-lg">
+          <h2 className="font-display text-2xl md:text-3xl font-bold text-white mt-2 drop-shadow-lg">
             From Source to Kitchen
           </h2>
           <div className="w-12 h-1 bg-gradient-gold mt-4 rounded-full" />
@@ -192,12 +192,12 @@ const StoryJourney = () => {
               </div>
 
               {/* Headline */}
-              <h3 className="font-display text-2xl md:text-4xl lg:text-5xl font-bold text-white mb-2 md:mb-4 leading-tight drop-shadow-lg">
+              <h3 className="font-display text-xl md:text-3xl lg:text-4xl font-bold text-white mb-2 md:mb-4 leading-tight drop-shadow-lg">
                 {currentStage.headline}
               </h3>
 
               {/* Description */}
-              <p className="font-body text-sm md:text-base lg:text-lg text-white/90 leading-relaxed drop-shadow-md max-w-lg">
+              <p className="font-body text-sm md:text-sm lg:text-base text-white/90 leading-relaxed drop-shadow-md max-w-lg">
                 {currentStage.description}
               </p>
             </motion.div>
