@@ -46,6 +46,7 @@ const stages = [
     icon: Package,
     color: '#A88B3A',
     accent: '#C9A84C',
+    objectPosition: 'center 60%',
   },
   {
     id: 5,
@@ -57,6 +58,7 @@ const stages = [
     icon: ShoppingBag,
     color: '#876E2E',
     accent: '#A88B3A',
+    objectPosition: 'center 60%',
   },
   {
     id: 6,
@@ -68,6 +70,7 @@ const stages = [
     icon: Heart,
     color: '#A0522D',
     accent: '#C0724D',
+    objectPosition: 'center 15%',
   },
 ];
 
@@ -115,7 +118,8 @@ const StoryJourney = () => {
               animate={{ opacity: 1, scale: 1 }}
               exit={{ opacity: 0 }}
               transition={{ duration: 0.8 }}
-              className="absolute inset-0 w-full h-full object-cover object-center"
+              className="absolute inset-0 w-full h-full object-cover"
+              style={{ objectPosition: currentStage.objectPosition || 'center' }}
             />
           </AnimatePresence>
           {/* Subtle fade at the bottom of the mobile image */}
@@ -134,7 +138,8 @@ const StoryJourney = () => {
             animate={{ opacity: 1, scale: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 1.2, ease: "easeOut" }}
-            className="absolute inset-0 w-full h-full object-cover object-center"
+            className="absolute inset-0 w-full h-full object-cover"
+            style={{ objectPosition: currentStage.objectPosition || 'center' }}
           />
         </AnimatePresence>
         
