@@ -199,7 +199,7 @@ const StoryJourney = () => {
         </div>
 
         {/* Bottom Navigation / Progress Area */}
-        <div className="w-full mt-6 md:mt-12 flex flex-col md:flex-row items-center justify-between gap-4 md:gap-8 pt-4 md:pt-8 border-t border-white/20 backdrop-blur-sm rounded-xl md:rounded-3xl px-2 md:px-6">
+        <div className="w-full md:w-3/4 mt-6 md:mt-12 flex flex-col md:flex-row items-center justify-between gap-4 md:gap-8 pt-4 md:pt-8 border-t border-white/20 backdrop-blur-sm rounded-xl md:rounded-3xl px-2 md:px-6">
           
           {/* Play/Pause Toggle */}
           <button 
