@@ -5,7 +5,15 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Phone, Mail, MapPin, Clock, MessageCircle, Instagram } from 'lucide-react';
+import { Phone, Mail, MapPin, Clock, MessageCircle } from 'lucide-react';
+
+const InstagramIcon = ({ size = 24 }) => (
+  <svg xmlns="http://www.w3.org/2000/svg" width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+    <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+  </svg>
+);
 import SectionTitle from '../common/SectionTitle';
 import WhatsAppButton from '../common/WhatsAppButton';
 import { CONTACT_INFO } from '../../utils/constants';
@@ -22,7 +30,7 @@ const contactItems = [
     isWhatsapp: true,
   },
   { icon: Mail, label: 'Email', value: CONTACT_INFO.email, href: `mailto:${CONTACT_INFO.email}` },
-  { icon: Instagram, label: 'Instagram', value: '@seerat.spices', href: CONTACT_INFO.instagram },
+  { icon: InstagramIcon, label: 'Instagram', value: '@seerat.spices', href: CONTACT_INFO.instagram },
   { icon: MapPin, label: 'Address', value: CONTACT_INFO.address, href: '#' },
   { icon: Clock, label: 'Hours', value: CONTACT_INFO.workingHours, href: '#' },
 ];
