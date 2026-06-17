@@ -63,9 +63,10 @@ export const PRODUCTS = [
   { id: 5, name: 'Elaichi', slug: 'elaichi', category: 'whole-spices', image: '/images/products/elaichi.png' },
   { id: 6, name: 'Black Pepper (Whole)', slug: 'black-pepper-whole', category: 'whole-spices', image: '/images/products/kali-mirch.png' },
   { id: 7, name: 'Methi Dana', slug: 'methi-dana', category: 'whole-spices', image: '/images/products/methi-dana.jpg' },
-  { id: 8, name: 'Hing Bandhani', slug: 'hing-bandhani', category: 'whole-spices', image: '/images/products/placeholder.png' },
+  { id: 8, name: 'Hing Bandhani', slug: 'hing-bandhani', category: 'special-grinds', image: '/images/products/placeholder.png' },
   { id: 9, name: 'Hing Raw', slug: 'hing-raw', category: 'whole-spices', image: '/images/products/raw-hing.jpeg' },
   { id: 10, name: 'Kasuri Methi', slug: 'kasuri-methi', category: 'whole-spices', image: '/images/products/kasuri-methi.png' },
+  { id: 24, name: 'Garam Masala (Whole)', slug: 'garam-masala-whole', category: 'whole-spices', image: '/images/products/sabut-garam-masala.jpeg' },
 
   // Essentials
   { id: 12, name: 'Haldi Powder', slug: 'haldi-powder', category: 'essentials', image: '/images/products/turmeric.png' },
@@ -84,7 +85,6 @@ export const PRODUCTS = [
   // Blended Spices
   { id: 16, name: 'Garam Masala', slug: 'garam-masala', category: 'blended-spices', image: '/images/products/garam-masala.png' },
   { id: 17, name: 'Sabji Masala', slug: 'sabji-masala', category: 'blended-spices', image: '/images/products/sabji-masala.png' },
-  { id: 24, name: 'Garam Masala (Whole)', slug: 'garam-masala-whole', category: 'blended-spices', image: '/images/products/sabut-garam-masala.jpeg' },
 ];
 
 // Demo combo packs

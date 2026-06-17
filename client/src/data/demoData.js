@@ -304,7 +304,7 @@ export const demoProducts = [
     id: 'p25',
     name: 'Bandhani Hing',
     slug: 'bandhani-hing',
-    category: 'whole-spices',
+    category: 'special-grinds',
     description: 'Strong, premium quality asafoetida.',
     image: '/images/products/hing.png',
     weightOptions: [{ weight: '25g', price: 110 }, { weight: '50g', price: 210 }, { weight: '100g', price: 400 }],
@@ -321,6 +321,28 @@ export const demoProducts = [
     weightOptions: [{ weight: '50g', price: 160 }, { weight: '100g', price: 308 }],
     isFeatured: true,
     tags: ['premium', 'poppy']
+  },
+  {
+    id: 'p27',
+    name: 'Garam Masala (Whole)',
+    slug: 'garam-masala-whole',
+    category: 'whole-spices',
+    description: 'Premium whole spices blend for authentic Garam Masala.',
+    image: '/images/products/sabut-garam-masala.jpeg',
+    weightOptions: [{ weight: '50g', price: 60 }],
+    isFeatured: false,
+    tags: ['premium', 'whole', 'masala']
+  },
+  {
+    id: 'p28',
+    name: 'Hing Raw',
+    slug: 'hing-raw',
+    category: 'whole-spices',
+    description: 'Pure, raw asafoetida with an intense flavor.',
+    image: '/images/products/raw-hing.jpeg',
+    weightOptions: [{ weight: '25g', price: 150 }],
+    isFeatured: false,
+    tags: ['premium', 'asafoetida', 'raw']
   }
 ];
 
@@ -383,5 +405,6 @@ export const demoOffers = [
     type: 'freebie'
   }
 ];
+
 
 
