@@ -90,14 +90,14 @@ export const PRODUCTS = [
 // Demo combo packs
 export const COMBOS = [
   {
-    id: 'everyday-essentials',
-    name: 'Everyday Essentials Combo',
-    slug: 'everyday-essentials',
-    description: 'The fundamental spices for every Indian kitchen.',
-    image: '/images/combos/everyday_essentials.jpg',
-    products: ['Haldi Powder', 'Dhania Powder', 'Mirch Powder', 'Garam Masala'],
-    price: 299,
-    mrp: 400,
+    id: 'all-purpose',
+    name: 'All Purpose Combo (Everyday Essential)',
+    slug: 'all-purpose',
+    description: 'The everyday essential spices for your kitchen.',
+    image: '/images/combos/all-purpose.jpeg',
+    products: ['Haldi Powder', 'Dhania Powder', 'Mirch Powder', 'Garam Masala', 'Sabji Masala'],
+    price: 349,
+    mrp: 450,
     savings: 101,
   },
   {
@@ -105,21 +105,10 @@ export const COMBOS = [
     name: 'Tadka Combo',
     slug: 'tadka-combo',
     description: 'Perfect for the ultimate tempering and finishing flavors.',
-    image: '/images/combos/tadka-combo.jpg',
+    image: '/images/combos/tadka-combo.jpeg',
     products: ['Hing Raw', 'Kashmiri Mirch', 'Jeera (Whole)'],
     price: 349,
     mrp: 450,
-    savings: 101,
-  },
-  {
-    id: 'punjabi-combo',
-    name: 'Punjabi Combo',
-    slug: 'punjabi-combo',
-    description: 'Authentic flavors for rich Punjabi dishes.',
-    image: '/images/combos/punjabi.jpg',
-    products: ['Mirch Powder', 'Amchur Powder', 'Dhania Powder', 'Jeera (Whole)'],
-    price: 399,
-    mrp: 500,
     savings: 101,
   },
   {
@@ -127,23 +116,12 @@ export const COMBOS = [
     name: 'Trio Combo',
     slug: 'trio-combo',
     description: 'The classic Indian spice trinity.',
-    image: '/images/combos/triocombo.jpg',
+    image: '/images/combos/trio-combo.jpeg',
     products: ['Haldi Powder', 'Dhania Powder', 'Mirch Powder'],
     price: 199,
     mrp: 250,
     savings: 51,
-  },
-  {
-    id: 'all-purpose-masala',
-    name: 'All Purpose Masala',
-    slug: 'all-purpose-masala',
-    description: 'Versatile blended masalas for everyday cooking.',
-    image: '/images/combos/allpurpose.jpg',
-    products: ['Sabji Masala', 'Garam Masala'],
-    price: 149,
-    mrp: 180,
-    savings: 31,
-  },
+  }
 ];
 
 // Contact info

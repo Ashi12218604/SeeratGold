@@ -323,34 +323,49 @@ const seed = async () => {
     /* ---------- Combos ---------- */
     const combosData = [
       {
-        name: 'Everyday Essentials Combo',
-        slug: 'everyday-essentials-combo',
-        description: 'The holy trinity of Indian cooking: Haldi, Dhania, and Mirch powder.',
+        name: 'All Purpose Combo (Everyday Essential)',
+        slug: 'all-purpose-combo',
+        description: 'The everyday essential spices for your kitchen.',
         products: products
           .filter((p) =>
-            ['haldi-powder', 'mirch-powder', 'dhania-powder'].includes(p.slug)
+            ['haldi-powder', 'mirch-powder', 'dhania-powder', 'garam-masala', 'sabji-masala'].includes(p.slug)
           )
           .map((p) => p._id),
-        images: ['/images/products/placeholder.png'],
-        price: 149,
-        mrp: 163,
+        images: ['/images/combos/all-purpose.jpeg'],
+        price: 349,
+        mrp: 450,
         tags: ['starter', 'essential'],
         isFeatured: true,
       },
       {
-        name: 'Whole Spices Starter Pack',
-        slug: 'whole-spices-starter-pack',
-        description: 'A perfect selection of whole spices for tempering (tadka).',
+        name: 'Tadka Combo',
+        slug: 'tadka-combo',
+        description: 'Perfect for the ultimate tempering and finishing flavors.',
         products: products
           .filter((p) =>
-            ['jeera-whole', 'kali-mirch-whole', 'laung', 'elaichi'].includes(p.slug)
+            ['bandhani-hing', 'kashmiri-mirch', 'jeera-whole'].includes(p.slug)
           )
           .map((p) => p._id),
-        images: ['/images/products/placeholder.png'],
-        price: 399,
-        mrp: 441,
+        images: ['/images/combos/tadka-combo.jpeg'],
+        price: 349,
+        mrp: 450,
         tags: ['premium', 'blend'],
         isFeatured: true,
+      },
+      {
+        name: 'Trio Combo',
+        slug: 'trio-combo',
+        description: 'The classic Indian spice trinity.',
+        products: products
+          .filter((p) =>
+            ['haldi-powder', 'dhania-powder', 'mirch-powder'].includes(p.slug)
+          )
+          .map((p) => p._id),
+        images: ['/images/combos/trio-combo.jpeg'],
+        price: 199,
+        mrp: 250,
+        tags: ['starter', 'essential'],
+        isFeatured: false,
       },
     ];
 
