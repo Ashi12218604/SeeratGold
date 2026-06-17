@@ -10,16 +10,16 @@ const AnnouncementBar = () => {
       >
         <span>🎁 Flat 15% Off on all individual spice orders</span>
         <span>🏷️ Extra 5% Off on all combo packs</span>
-        <span>✨ Free Trial Kit (worth Rs. 149) on orders above Rs. 1100!</span>
+        <span>✨ Free Trial Kit (worth Rs. 149) on orders above Rs. 999!</span>
         <span>🎁 Flat 15% Off on all individual spice orders</span>
         <span>🏷️ Extra 5% Off on all combo packs</span>
-        <span>✨ Free Trial Kit (worth Rs. 149) on orders above Rs. 1100!</span>
+        <span>✨ Free Trial Kit (worth Rs. 149) on orders above Rs. 999!</span>
         <span>🎁 Flat 15% Off on all individual spice orders</span>
         <span>🏷️ Extra 5% Off on all combo packs</span>
-        <span>✨ Free Trial Kit (worth Rs. 149) on orders above Rs. 1100!</span>
+        <span>✨ Free Trial Kit (worth Rs. 149) on orders above Rs. 999!</span>
         <span>🎁 Flat 15% Off on all individual spice orders</span>
         <span>🏷️ Extra 5% Off on all combo packs</span>
-        <span>✨ Free Trial Kit (worth Rs. 149) on orders above Rs. 1100!</span>
+        <span>✨ Free Trial Kit (worth Rs. 149) on orders above Rs. 999!</span>
       </div>
     </div>
   );

@@ -5,7 +5,7 @@
 
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Leaf, Shield, Sparkles, Package, Heart } from 'lucide-react';
+import { Leaf, Shield, Sparkles, Package, Heart, ShoppingBag } from 'lucide-react';
 import SectionTitle from '../common/SectionTitle';
 
 const usps = [
@@ -31,7 +31,13 @@ const usps = [
     icon: Package,
     title: 'Fresh Packaging',
     description: 'Sealed to lock in flavor, aroma, and freshness from our facility to your kitchen.',
-    image: '/images/story/packaging.png',
+    image: '/images/combos/tadka-combo.jpeg',
+  },
+  {
+    icon: ShoppingBag,
+    title: 'Wide Range',
+    description: 'A comprehensive collection of whole, ground, and blended spices to elevate every dish.',
+    image: '/images/combos/all-purpose.jpeg',
   },
   {
     icon: Heart,

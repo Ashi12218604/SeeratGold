@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Sprout, Droplets, Cog, Package, Heart, Play, Pause, ChevronRight } from 'lucide-react';
+import { Sprout, Droplets, Cog, Package, Heart, Play, Pause, ChevronRight, ShoppingBag } from 'lucide-react';
 
 const stages = [
   {
@@ -42,13 +42,24 @@ const stages = [
     titleHi: 'पैकेजिंग',
     headline: 'Sealed Fresh',
     description: 'Freshness and quality are carefully locked in through hygienic, airtight packaging — ensuring every pinch tastes as nature intended.',
-    image: '/images/story/packaging.png',
+    image: '/images/combos/tadka-combo.jpeg',
     icon: Package,
     color: '#A88B3A',
     accent: '#C9A84C',
   },
   {
     id: 5,
+    title: 'Our Range',
+    titleHi: 'उत्पाद',
+    headline: 'Premium Spices',
+    description: 'Explore our authentic collection of spices, carefully curated for every Indian kitchen.',
+    image: '/images/combos/all-purpose.jpeg',
+    icon: ShoppingBag,
+    color: '#876E2E',
+    accent: '#A88B3A',
+  },
+  {
+    id: 6,
     title: 'Kitchen',
     titleHi: 'आपकी रसोई',
     headline: 'Taste the Difference',

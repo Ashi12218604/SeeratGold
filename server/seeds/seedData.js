@@ -398,7 +398,7 @@ const seed = async () => {
       },
       {
         title: 'Free Trial Kit',
-        description: 'Get a free Seerat Gold Trial Kit (worth Rs. 149) on orders above Rs. 1100.',
+        description: 'Get a free Seerat Gold Trial Kit (worth Rs. 149) on orders above Rs. 999.',
         type: 'freebie',
         value: 0,
         applicableProducts: [],

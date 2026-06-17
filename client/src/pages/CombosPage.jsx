@@ -8,6 +8,7 @@ import { motion } from 'framer-motion';
 import { Helmet } from 'react-helmet-async';
 import { Gift } from 'lucide-react';
 import ComboCard from '../components/common/ComboCard';
+import CustomComboBuilder from '../components/combos/CustomComboBuilder';
 import WhatsAppButton from '../components/common/WhatsAppButton';
 import { useAppContext } from '../context/AppContext';
 
@@ -58,23 +59,7 @@ const CombosPage = () => {
             ))}
           </div>
 
-          {/* Custom combo CTA */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.3 }}
-            className="text-center mt-14 p-8 md:p-12 rounded-2xl bg-white shadow-card"
-          >
-            <h3 className="font-display text-2xl md:text-3xl font-bold text-charcoal mb-3">
-              Want a Custom Combo?
-            </h3>
-            <p className="font-body text-charcoal/60 max-w-lg mx-auto mb-6">
-              Can't find the perfect combination? Let us create a custom combo pack tailored to your needs. 
-              Just tell us what you want!
-            </p>
-            <WhatsAppButton variant="primary" className="mx-auto" />
-          </motion.div>
+          <CustomComboBuilder />
         </section>
       </main>
     </>
