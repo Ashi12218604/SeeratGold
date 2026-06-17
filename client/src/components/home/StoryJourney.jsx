@@ -88,7 +88,8 @@ const StoryJourney = () => {
   const Icon = currentStage.icon;
 
   return (
-    <section id="story-section" className="relative w-full md:min-h-[75vh] flex flex-col bg-charcoal-dark overflow-hidden pt-12 md:pt-0">
+    <div className="w-full relative z-10 py-8 md:py-0">
+      <section id="story-section" className="relative w-full md:w-[85%] lg:w-3/4 mx-auto md:min-h-[70vh] flex flex-col bg-charcoal-dark overflow-hidden pt-12 md:pt-0 md:my-16 md:rounded-[40px] shadow-2xl">
       
       {/* ---------------- MOBILE LAYOUT ---------------- */}
       {/* Mobile Section Header */}
@@ -199,7 +200,7 @@ const StoryJourney = () => {
         </div>
 
         {/* Bottom Navigation / Progress Area */}
-        <div className="w-full md:w-3/4 mt-6 md:mt-12 flex flex-col md:flex-row items-center justify-between gap-4 md:gap-8 pt-4 md:pt-8 border-t border-white/20 backdrop-blur-sm rounded-xl md:rounded-3xl px-2 md:px-6">
+        <div className="w-full mt-6 md:mt-12 flex flex-col md:flex-row items-center justify-between gap-4 md:gap-8 pt-4 md:pt-8 border-t border-white/20 backdrop-blur-sm rounded-xl md:rounded-3xl px-2 md:px-6">
           
           {/* Play/Pause Toggle */}
           <button 
@@ -253,7 +254,8 @@ const StoryJourney = () => {
         </div>
 
       </div>
-    </section>
+      </section>
+    </div>
   );
 };
 
