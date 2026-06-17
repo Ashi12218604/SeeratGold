@@ -22,7 +22,13 @@ const CustomComboBuilder = () => {
 
   const buildWhatsAppMessage = () => {
     const items = selectedSpices.map(item => `- ${item}`).join('\n');
-    return `Hi, I'd like to order a custom combo pack with the following spices:\n\n${items}\n\nPlease let me know the total price and details.`;
+    let priceText = "Please let me know the total price and details.";
+    if (selectedSpices.length === 6) {
+      priceText = "As per the offer, this 6-item combo is for ₹599.";
+    } else if (selectedSpices.length === 20) {
+      priceText = "As per the offer, this 20-item combo is for ₹999.";
+    }
+    return `Hi, I'd like to order a custom combo pack with the following ${selectedSpices.length} spices:\n\n${items}\n\n${priceText}`;
   };
 
   return (
@@ -32,7 +38,7 @@ const CustomComboBuilder = () => {
           Build Your Own Custom Combo
         </h3>
         <p className="font-body text-cream/80 max-w-2xl">
-          Select the spices you want in your custom box. We'll give you a special combo price when you order!
+          Select the spices you want in your custom box. Enjoy our special flat pricing: <strong>6 items for ₹599</strong>, or a full box of <strong>20 items for ₹999</strong>!
         </p>
       </div>
       
@@ -120,7 +126,9 @@ const CustomComboBuilder = () => {
               Get Custom Quote
             </a>
             <p className="text-center text-[11px] font-body text-charcoal/50 mt-3">
-              We will calculate the best combo price for you on WhatsApp!
+              {selectedSpices.length === 6 && <span className="font-bold text-primary">Great! You've selected 6 items for ₹599.</span>}
+              {selectedSpices.length === 20 && <span className="font-bold text-primary">Amazing! You've selected 20 items for ₹999.</span>}
+              {selectedSpices.length !== 6 && selectedSpices.length !== 20 && "Pricing: 6 items for ₹599 | 20 items for ₹999"}
             </p>
           </div>
         </div>
