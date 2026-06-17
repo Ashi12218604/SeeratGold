@@ -88,8 +88,8 @@ const StoryJourney = () => {
   const Icon = currentStage.icon;
 
   return (
-    <div className="w-full relative z-10 py-8 md:py-0">
-      <section id="story-section" className="relative w-full md:w-[85%] lg:w-3/4 mx-auto md:min-h-[70vh] flex flex-col bg-charcoal-dark overflow-hidden pt-12 md:pt-0 md:my-16 md:rounded-[40px] shadow-2xl">
+    <div className="w-full px-4 md:px-8 py-8 md:py-12 bg-transparent z-10 relative">
+      <section id="story-section" className="relative w-full max-w-6xl mx-auto md:h-[600px] flex flex-col bg-charcoal-dark overflow-hidden pt-12 md:pt-0 rounded-2xl md:rounded-3xl shadow-2xl">
       
       {/* ---------------- MOBILE LAYOUT ---------------- */}
       {/* Mobile Section Header */}
@@ -147,7 +147,7 @@ const StoryJourney = () => {
       <div className="hidden md:block absolute top-0 left-0 w-full h-32 md:h-64 bg-gradient-to-b from-charcoal-dark via-charcoal-dark/90 to-transparent z-10 pointer-events-none" />
 
       {/* Content Container (Shared) */}
-      <div className="section-container relative z-20 w-full flex-1 flex flex-col pt-0 md:pt-24 pb-8 md:pb-12">
+      <div className="section-container relative z-20 w-full h-full flex flex-col pt-0 md:pt-16 pb-8 md:pb-8">
         
         {/* Desktop Section Header (Hidden on Mobile) */}
         <div className="hidden md:block w-full mb-12">
@@ -200,7 +200,7 @@ const StoryJourney = () => {
         </div>
 
         {/* Bottom Navigation / Progress Area */}
-        <div className="w-full mt-6 md:mt-12 flex flex-col md:flex-row items-center justify-between gap-4 md:gap-8 pt-4 md:pt-8 border-t border-white/20 backdrop-blur-sm rounded-xl md:rounded-3xl px-2 md:px-6">
+        <div className="w-full mt-auto flex flex-col md:flex-row items-center justify-between gap-4 md:gap-8 pt-4 md:pt-6 border-t border-white/20 backdrop-blur-sm rounded-xl md:rounded-3xl px-2 md:px-6">
           
           {/* Play/Pause Toggle */}
           <button 
