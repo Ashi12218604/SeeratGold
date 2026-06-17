@@ -1,32 +1,32 @@
 // demoData.js
 export const demoCategories = [
   {
-    id: 'ground-spices',
-    name: 'Ground Spices',
-    slug: 'ground-spices',
-    description: 'Authentic Indian masalas, ground to perfection.',
-    image: '/images/categories/ground-spices.png'
+    id: 'essentials',
+    name: 'Essentials',
+    slug: 'essentials',
+    description: 'Everyday spices that form the heart of Indian cooking.',
+    image: '/images/categories/placeholder.png'
+  },
+  {
+    id: 'special-grinds',
+    name: 'Special Grinds',
+    slug: 'special-grinds',
+    description: 'Specialty ground spices and powders for that extra flavor.',
+    image: '/images/categories/placeholder.png'
   },
   {
     id: 'whole-spices',
     name: 'Whole Spices',
     slug: 'whole-spices',
-    description: 'Pure, unadulterated whole spices direct from the source.',
-    image: '/images/categories/whole-spices.png'
+    description: 'Handpicked whole spices that retain their full aroma and potency.',
+    image: '/images/categories/placeholder.png'
   },
   {
-    id: 'blended-masalas',
-    name: 'Blended Masalas',
-    slug: 'blended-masalas',
+    id: 'blended-spices',
+    name: 'Blended Spices',
+    slug: 'blended-spices',
     description: 'Perfectly balanced blends for your favorite dishes.',
-    image: '/images/categories/blended-masalas.png'
-  },
-  {
-    id: 'premium-spices',
-    name: 'Premium Spices',
-    slug: 'premium-spices',
-    description: 'The finest selection of rare and premium spices.',
-    image: '/images/categories/premium-spices.png'
+    image: '/images/categories/placeholder.png'
   }
 ];
 
@@ -36,7 +36,7 @@ export const demoProducts = [
     id: 'p1',
     name: 'Jeera Powder',
     slug: 'jeera-powder',
-    category: 'ground-spices',
+    category: 'special-grinds',
     description: 'Premium roasted cumin powder for enhanced flavor.',
     image: '/images/products/jeera-powder.png',
     weightOptions: [{ weight: '50g', price: 46 }, { weight: '100g', price: 86 }],
@@ -47,7 +47,7 @@ export const demoProducts = [
     id: 'p2',
     name: 'Amchur Powder',
     slug: 'amchur-powder',
-    category: 'ground-spices',
+    category: 'special-grinds',
     description: 'Tangy dry mango powder, perfect for adding a sour kick.',
     image: '/images/products/dry-mango-powder.png',
     weightOptions: [{ weight: '50g', price: 46 }, { weight: '100g', price: 88 }],
@@ -58,7 +58,7 @@ export const demoProducts = [
     id: 'p3',
     name: 'Kashmiri Mirch',
     slug: 'kashmiri-mirch',
-    category: 'ground-spices',
+    category: 'special-grinds',
     description: 'Vibrant red color with a mild, sweet heat.',
     image: '/images/products/kasmiri-mirch.png',
     weightOptions: [{ weight: '50g', price: 68 }, { weight: '100g', price: 130 }],
@@ -69,7 +69,7 @@ export const demoProducts = [
     id: 'p4',
     name: 'Ginger Powder',
     slug: 'ginger-powder',
-    category: 'ground-spices',
+    category: 'special-grinds',
     description: 'Warm and spicy dry ginger powder.',
     image: '/images/products/ginger-powder.png',
     weightOptions: [{ weight: '50g', price: 46 }, { weight: '100g', price: 88 }],
@@ -80,7 +80,7 @@ export const demoProducts = [
     id: 'p5',
     name: 'Black Pepper',
     slug: 'black-pepper',
-    category: 'ground-spices',
+    category: 'special-grinds',
     description: 'Finely ground sharp and biting black pepper.',
     image: '/images/products/black-pepper.png',
     weightOptions: [{ weight: '50g', price: 104 }, { weight: '100g', price: 205 }],
@@ -91,7 +91,7 @@ export const demoProducts = [
     id: 'p6',
     name: 'Saunf Powder',
     slug: 'saunf-powder',
-    category: 'ground-spices',
+    category: 'special-grinds',
     description: 'Sweet and aromatic fennel powder.',
     image: '/images/products/saunf-powder.jpeg',
     weightOptions: [{ weight: '50g', price: 43 }, { weight: '100g', price: 80 }],
@@ -102,7 +102,7 @@ export const demoProducts = [
     id: 'p7',
     name: 'Sabji Masala',
     slug: 'sabji-masala',
-    category: 'blended-masalas',
+    category: 'blended-spices',
     description: 'A perfect everyday blend for mixed vegetable dishes.',
     image: '/images/products/sabji-masala.png',
     weightOptions: [{ weight: '50g', price: 47 }, { weight: '100g', price: 87 }],
@@ -113,7 +113,7 @@ export const demoProducts = [
     id: 'p8',
     name: 'Garam Masala',
     slug: 'garam-masala',
-    category: 'blended-masalas',
+    category: 'blended-spices',
     description: 'A robust and warm blend of whole spices.',
     image: '/images/products/garam-masala.png',
     weightOptions: [{ weight: '50g', price: 66 }, { weight: '100g', price: 126 }],
@@ -124,7 +124,7 @@ export const demoProducts = [
     id: 'p9',
     name: 'Haldi Powder',
     slug: 'haldi-powder',
-    category: 'ground-spices',
+    category: 'essentials',
     description: 'Pure, rich yellow turmeric powder with high curcumin content.',
     image: '/images/products/turmeric.png',
     weightOptions: [{ weight: '50g', price: 30 }, { weight: '100g', price: 55 }, { weight: '200g', price: 104 }, { weight: '500g', price: 250 }],
@@ -135,7 +135,7 @@ export const demoProducts = [
     id: 'p10',
     name: 'Dhania Powder',
     slug: 'dhania-powder',
-    category: 'ground-spices',
+    category: 'essentials',
     description: 'Freshly ground coriander seeds for a citrusy, earthy flavor.',
     image: '/images/products/corriander-powder.png',
     weightOptions: [{ weight: '50g', price: 28 }, { weight: '100g', price: 50 }, { weight: '200g', price: 90 }, { weight: '500g', price: 215 }],
@@ -146,7 +146,7 @@ export const demoProducts = [
     id: 'p11',
     name: 'Mirch Powder',
     slug: 'mirch-powder',
-    category: 'ground-spices',
+    category: 'essentials',
     description: 'Hot and spicy red chilli powder.',
     image: '/images/products/mirchi.png',
     weightOptions: [{ weight: '50g', price: 36 }, { weight: '100g', price: 68 }, { weight: '200g', price: 128 }, { weight: '500g', price: 315 }],
@@ -157,7 +157,7 @@ export const demoProducts = [
     id: 'p12',
     name: 'Kuti Mirch',
     slug: 'kuti-mirch',
-    category: 'ground-spices',
+    category: 'essentials',
     description: 'Coarsely crushed red chillies for texture and heat.',
     image: '/images/products/kuti-mirch.jpeg',
     weightOptions: [{ weight: '50g', price: 36 }, { weight: '100g', price: 68 }, { weight: '200g', price: 128 }, { weight: '500g', price: 315 }],
@@ -192,7 +192,7 @@ export const demoProducts = [
     id: 'p15',
     name: 'Elaichi',
     slug: 'elaichi',
-    category: 'premium-spices',
+    category: 'whole-spices',
     description: 'Premium green cardamom pods, sweet and aromatic.',
     image: '/images/products/elaichi.png',
     weightOptions: [{ weight: '25g', price: 188 }],
@@ -304,7 +304,7 @@ export const demoProducts = [
     id: 'p25',
     name: 'Bandhani Hing',
     slug: 'bandhani-hing',
-    category: 'premium-spices',
+    category: 'whole-spices',
     description: 'Strong, premium quality asafoetida.',
     image: '/images/products/hing.png',
     weightOptions: [{ weight: '25g', price: 110 }, { weight: '50g', price: 210 }, { weight: '100g', price: 400 }],
@@ -315,7 +315,7 @@ export const demoProducts = [
     id: 'p26',
     name: 'Khas Khas',
     slug: 'khas-khas',
-    category: 'premium-spices',
+    category: 'whole-spices',
     description: 'Premium poppy seeds for a nutty flavor and thick gravies.',
     image: '/images/products/khas-khas.jpg',
     weightOptions: [{ weight: '50g', price: 160 }, { weight: '100g', price: 308 }],
@@ -383,3 +383,5 @@ export const demoOffers = [
     type: 'freebie'
   }
 ];
+
+

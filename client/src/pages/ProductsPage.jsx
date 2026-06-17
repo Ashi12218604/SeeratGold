@@ -11,24 +11,10 @@ import ProductCard from '../components/common/ProductCard';
 import SectionTitle from '../components/common/SectionTitle';
 import { useAppContext } from '../context/AppContext';
 
-const FORMATS = [
-  { id: 'whole', name: 'Whole' },
-  { id: 'ground', name: 'Ground' },
-  { id: 'blend', name: 'Blends' },
-];
-
-const HEAT_LEVELS = [
-  { id: 'mild', name: 'Mild' },
-  { id: 'medium', name: 'Medium' },
-  { id: 'hot', name: 'Very Hot' },
-];
-
 const ProductsPage = () => {
   const { products, categories } = useAppContext();
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategories, setSelectedCategories] = useState([]);
-  const [selectedFormats, setSelectedFormats] = useState([]);
-  const [selectedHeatLevels, setSelectedHeatLevels] = useState([]);
   const [showFilters, setShowFilters] = useState(false);
 
   // Toggle category filter
@@ -38,24 +24,10 @@ const ProductsPage = () => {
     );
   };
 
-  const toggleFormat = (formatId) => {
-    setSelectedFormats((prev) =>
-      prev.includes(formatId) ? prev.filter((f) => f !== formatId) : [...prev, formatId]
-    );
-  };
-
-  const toggleHeatLevel = (heatId) => {
-    setSelectedHeatLevels((prev) =>
-      prev.includes(heatId) ? prev.filter((h) => h !== heatId) : [...prev, heatId]
-    );
-  };
-
   // Clear all filters
   const clearFilters = () => {
     setSearchQuery('');
     setSelectedCategories([]);
-    setSelectedFormats([]);
-    setSelectedHeatLevels([]);
   };
 
   // Filtered products
@@ -77,31 +49,11 @@ const ProductsPage = () => {
       result = result.filter((p) => selectedCategories.includes(p.category));
     }
 
-    // Filter by Format
-    if (selectedFormats.length > 0) {
-      result = result.filter((p) => {
-        const hasWhole = selectedFormats.includes('whole') && (p.tags?.includes('whole') || p.category === 'whole-spices');
-        const hasGround = selectedFormats.includes('ground') && (p.category === 'ground-spices' || p.tags?.includes('crushed') || p.tags?.includes('powder'));
-        const hasBlend = selectedFormats.includes('blend') && (p.tags?.includes('blend') || p.category === 'blended-masalas');
-        return hasWhole || hasGround || hasBlend;
-      });
-    }
-
-    // Filter by Heat Level
-    if (selectedHeatLevels.length > 0) {
-      result = result.filter((p) => {
-        const hasMild = selectedHeatLevels.includes('mild') && (p.tags?.includes('mild') || p.tags?.includes('sweet') || p.tags?.includes('tangy') || p.tags?.includes('essential'));
-        const hasMedium = selectedHeatLevels.includes('medium') && (p.tags?.includes('warm') || p.tags?.includes('sharp') || p.tags?.includes('strong'));
-        const hasHot = selectedHeatLevels.includes('hot') && p.tags?.includes('hot');
-        return hasMild || hasMedium || hasHot;
-      });
-    }
-
     return result;
-  }, [products, searchQuery, selectedCategories, selectedFormats, selectedHeatLevels]);
+  }, [products, searchQuery, selectedCategories]);
 
-  const hasActiveFilters = searchQuery.trim() || selectedCategories.length > 0 || selectedFormats.length > 0 || selectedHeatLevels.length > 0;
-  const activeFiltersCount = selectedCategories.length + selectedFormats.length + selectedHeatLevels.length;
+  const hasActiveFilters = searchQuery.trim() || selectedCategories.length > 0;
+  const activeFiltersCount = selectedCategories.length;
 
   // Sidebar filters component (shared between desktop and mobile)
   const FilterContent = () => (
@@ -128,56 +80,6 @@ const ProductsPage = () => {
               </span>
               <span className="text-xs font-body text-charcoal/40 ml-auto">
                 ({cat.productCount})
-              </span>
-            </label>
-          ))}
-        </div>
-      </div>
-
-      {/* Format Filters */}
-      <div>
-        <h3 className="font-display text-base font-semibold text-charcoal mb-3">
-          Format
-        </h3>
-        <div className="space-y-2">
-          {FORMATS.map((format) => (
-            <label
-              key={format.id}
-              className="flex items-center gap-3 cursor-pointer group"
-            >
-              <input
-                type="checkbox"
-                checked={selectedFormats.includes(format.id)}
-                onChange={() => toggleFormat(format.id)}
-                className="w-4 h-4 rounded border-charcoal/30 text-primary focus:ring-primary/30"
-              />
-              <span className="text-sm font-body text-charcoal/70 group-hover:text-charcoal transition-colors">
-                {format.name}
-              </span>
-            </label>
-          ))}
-        </div>
-      </div>
-
-      {/* Heat Level Filters */}
-      <div>
-        <h3 className="font-display text-base font-semibold text-charcoal mb-3">
-          Heat Level
-        </h3>
-        <div className="space-y-2">
-          {HEAT_LEVELS.map((heat) => (
-            <label
-              key={heat.id}
-              className="flex items-center gap-3 cursor-pointer group"
-            >
-              <input
-                type="checkbox"
-                checked={selectedHeatLevels.includes(heat.id)}
-                onChange={() => toggleHeatLevel(heat.id)}
-                className="w-4 h-4 rounded border-charcoal/30 text-primary focus:ring-primary/30"
-              />
-              <span className="text-sm font-body text-charcoal/70 group-hover:text-charcoal transition-colors">
-                {heat.name}
               </span>
             </label>
           ))}

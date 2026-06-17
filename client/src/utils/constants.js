@@ -20,22 +20,6 @@ export const NAV_LINKS = [
 // Product categories
 export const CATEGORIES = [
   {
-    id: 'whole-spices',
-    name: 'Whole Spices',
-    slug: 'whole-spices',
-    description: 'Handpicked whole spices that retain their full aroma and potency.',
-    productCount: 8,
-    image: '/images/categories/placeholder.png',
-  },
-  {
-    id: 'bestsellers',
-    name: 'Bestsellers',
-    slug: 'bestsellers',
-    description: 'Our most loved and highly rated products.',
-    productCount: 3,
-    image: '/images/categories/placeholder.png',
-  },
-  {
     id: 'essentials',
     name: 'Essentials',
     slug: 'essentials',
@@ -44,11 +28,27 @@ export const CATEGORIES = [
     image: '/images/categories/placeholder.png',
   },
   {
-    id: 'specials',
-    name: 'Specials',
-    slug: 'specials',
-    description: 'Specialty spices and powders for that extra flavor.',
+    id: 'special-grinds',
+    name: 'Special Grinds',
+    slug: 'special-grinds',
+    description: 'Specialty ground spices and powders for that extra flavor.',
     productCount: 6,
+    image: '/images/categories/placeholder.png',
+  },
+  {
+    id: 'whole-spices',
+    name: 'Whole Spices',
+    slug: 'whole-spices',
+    description: 'Handpicked whole spices that retain their full aroma and potency.',
+    productCount: 11,
+    image: '/images/categories/placeholder.png',
+  },
+  {
+    id: 'blended-spices',
+    name: 'Blended Spices',
+    slug: 'blended-spices',
+    description: 'Perfectly balanced blends for your favorite dishes.',
+    productCount: 2,
     image: '/images/categories/placeholder.png',
   },
 ];
@@ -63,28 +63,28 @@ export const PRODUCTS = [
   { id: 5, name: 'Elaichi', slug: 'elaichi', category: 'whole-spices', image: '/images/products/elaichi.png' },
   { id: 6, name: 'Black Pepper (Whole)', slug: 'black-pepper-whole', category: 'whole-spices', image: '/images/products/kali-mirch.png' },
   { id: 7, name: 'Methi Dana', slug: 'methi-dana', category: 'whole-spices', image: '/images/products/methi-dana.jpg' },
-  { id: 8, name: 'Garam Masala (Whole)', slug: 'garam-masala-whole', category: 'whole-spices', image: '/images/products/sabut-garam-masala.jpeg' },
-
-  // Bestsellers
-  { id: 9, name: 'Hing Bandhani', slug: 'hing-bandhani', category: 'bestsellers', image: '/images/products/placeholder.png' },
-  { id: 10, name: 'Hing Raw', slug: 'hing-raw', category: 'bestsellers', image: '/images/products/raw-hing.jpeg' },
-  { id: 11, name: 'Kasuri Methi', slug: 'kasuri-methi', category: 'bestsellers', image: '/images/products/kasuri-methi.png' },
+  { id: 8, name: 'Hing Bandhani', slug: 'hing-bandhani', category: 'whole-spices', image: '/images/products/placeholder.png' },
+  { id: 9, name: 'Hing Raw', slug: 'hing-raw', category: 'whole-spices', image: '/images/products/raw-hing.jpeg' },
+  { id: 10, name: 'Kasuri Methi', slug: 'kasuri-methi', category: 'whole-spices', image: '/images/products/kasuri-methi.png' },
 
   // Essentials
   { id: 12, name: 'Haldi Powder', slug: 'haldi-powder', category: 'essentials', image: '/images/products/turmeric.png' },
   { id: 13, name: 'Dhania Powder', slug: 'dhania-powder', category: 'essentials', image: '/images/products/corriander-powder.png' },
   { id: 14, name: 'Mirch Powder', slug: 'mirch-powder', category: 'essentials', image: '/images/products/mirchi.png' },
   { id: 15, name: 'Kuti Mirch Powder', slug: 'kuti-mirch-powder', category: 'essentials', image: '/images/products/kuti-mirch.jpeg' },
-  { id: 16, name: 'Garam Masala', slug: 'garam-masala', category: 'essentials', image: '/images/products/garam-masala.png' },
-  { id: 17, name: 'Sabji Masala', slug: 'sabji-masala', category: 'essentials', image: '/images/products/sabji-masala.png' },
 
-  // Specials
-  { id: 18, name: 'Amchur Powder', slug: 'amchur-powder', category: 'specials', image: '/images/products/dry-mango-powder.png' },
-  { id: 19, name: 'Jeera Powder', slug: 'jeera-powder', category: 'specials', image: '/images/products/jeera-powder.png' },
-  { id: 20, name: 'Kashmiri Mirch', slug: 'kashmiri-mirch', category: 'specials', image: '/images/products/kasmiri-mirch.png' },
-  { id: 21, name: 'Dry Ginger', slug: 'dry-ginger', category: 'specials', image: '/images/products/ginger-powder.png' },
-  { id: 22, name: 'Black Pepper (Powder)', slug: 'black-pepper-powder', category: 'specials', image: '/images/products/black-pepper.png' },
-  { id: 23, name: 'Saunf Powder', slug: 'saunf-powder', category: 'specials', image: '/images/products/saunf-powder.jpeg' },
+  // Special Grinds
+  { id: 18, name: 'Amchur Powder', slug: 'amchur-powder', category: 'special-grinds', image: '/images/products/dry-mango-powder.png' },
+  { id: 19, name: 'Jeera Powder', slug: 'jeera-powder', category: 'special-grinds', image: '/images/products/jeera-powder.png' },
+  { id: 20, name: 'Kashmiri Mirch', slug: 'kashmiri-mirch', category: 'special-grinds', image: '/images/products/kasmiri-mirch.png' },
+  { id: 21, name: 'Dry Ginger', slug: 'dry-ginger', category: 'special-grinds', image: '/images/products/ginger-powder.png' },
+  { id: 22, name: 'Black Pepper (Powder)', slug: 'black-pepper-powder', category: 'special-grinds', image: '/images/products/black-pepper.png' },
+  { id: 23, name: 'Saunf Powder', slug: 'saunf-powder', category: 'special-grinds', image: '/images/products/saunf-powder.jpeg' },
+
+  // Blended Spices
+  { id: 16, name: 'Garam Masala', slug: 'garam-masala', category: 'blended-spices', image: '/images/products/garam-masala.png' },
+  { id: 17, name: 'Sabji Masala', slug: 'sabji-masala', category: 'blended-spices', image: '/images/products/sabji-masala.png' },
+  { id: 24, name: 'Garam Masala (Whole)', slug: 'garam-masala-whole', category: 'blended-spices', image: '/images/products/sabut-garam-masala.jpeg' },
 ];
 
 // Demo combo packs

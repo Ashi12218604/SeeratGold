@@ -26,7 +26,7 @@ const CustomComboBuilder = () => {
   };
 
   return (
-    <div className="w-full mt-14 rounded-3xl bg-white shadow-card overflow-hidden" id="custom-combo-builder">
+    <div className="w-full max-w-5xl mx-auto mt-14 rounded-3xl bg-white shadow-card overflow-hidden" id="custom-combo-builder">
       <div className="bg-primary p-6 md:p-10 text-white">
         <h3 className="font-display text-2xl md:text-3xl font-bold mb-2">
           Build Your Own Custom Combo

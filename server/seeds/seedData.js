@@ -45,9 +45,9 @@ const categoriesData = [
     sortOrder: 3,
   },
   {
-    name: 'Blended Masalas',
+    name: 'Blended Spices',
     nameHi: 'मिश्रित मसाले',
-    slug: 'blended-masalas',
+    slug: 'blended-spices',
     description: 'Perfectly balanced blends for your favorite dishes.',
     icon: '🍛',
     sortOrder: 4,
@@ -58,7 +58,7 @@ const productsData = [
   // --- GROUND SPICES ---
   {
     name: 'Jeera Powder',
-    category: 'ground-spices',
+    category: 'special-grinds',
     description: 'Premium roasted cumin powder for enhanced flavor.',
     tags: ['essential', 'cumin'],
     isFeatured: true,
@@ -66,7 +66,7 @@ const productsData = [
   },
   {
     name: 'Amchur Powder',
-    category: 'ground-spices',
+    category: 'special-grinds',
     description: 'Tangy dry mango powder, perfect for adding a sour kick.',
     tags: ['tangy', 'mango'],
     isFeatured: false,
@@ -74,7 +74,7 @@ const productsData = [
   },
   {
     name: 'Kashmiri Mirch',
-    category: 'ground-spices',
+    category: 'special-grinds',
     description: 'Vibrant red color with a mild, sweet heat.',
     tags: ['mild', 'color', 'chilli'],
     isFeatured: true,
@@ -82,7 +82,7 @@ const productsData = [
   },
   {
     name: 'Ginger Powder',
-    category: 'ground-spices',
+    category: 'special-grinds',
     description: 'Warm and spicy dry ginger powder.',
     tags: ['warm', 'spice'],
     isFeatured: false,
@@ -90,7 +90,7 @@ const productsData = [
   },
   {
     name: 'Black Pepper',
-    category: 'ground-spices',
+    category: 'special-grinds',
     description: 'Finely ground sharp and biting black pepper.',
     tags: ['sharp', 'essential'],
     isFeatured: true,
@@ -98,7 +98,7 @@ const productsData = [
   },
   {
     name: 'Saunf Powder',
-    category: 'ground-spices',
+    category: 'special-grinds',
     description: 'Sweet and aromatic fennel powder.',
     tags: ['sweet', 'fennel'],
     isFeatured: false,
@@ -106,7 +106,7 @@ const productsData = [
   },
   {
     name: 'Sabji Masala',
-    category: 'blended-masalas',
+    category: 'blended-spices',
     description: 'A perfect everyday blend for mixed vegetable dishes.',
     tags: ['blend', 'everyday'],
     isFeatured: true,
@@ -114,7 +114,7 @@ const productsData = [
   },
   {
     name: 'Garam Masala',
-    category: 'blended-masalas',
+    category: 'blended-spices',
     description: 'A robust and warm blend of whole spices.',
     tags: ['blend', 'warm'],
     isFeatured: true,
@@ -122,7 +122,7 @@ const productsData = [
   },
   {
     name: 'Haldi Powder',
-    category: 'ground-spices',
+    category: 'special-grinds',
     description: 'Pure, rich yellow turmeric powder with high curcumin content.',
     tags: ['essential', 'turmeric'],
     isFeatured: true,
@@ -130,7 +130,7 @@ const productsData = [
   },
   {
     name: 'Dhania Powder',
-    category: 'ground-spices',
+    category: 'special-grinds',
     description: 'Freshly ground coriander seeds for a citrusy, earthy flavor.',
     tags: ['essential', 'coriander'],
     isFeatured: true,
@@ -138,7 +138,7 @@ const productsData = [
   },
   {
     name: 'Mirch Powder',
-    category: 'ground-spices',
+    category: 'special-grinds',
     description: 'Hot and spicy red chilli powder.',
     tags: ['hot', 'chilli'],
     isFeatured: false,
@@ -146,7 +146,7 @@ const productsData = [
   },
   {
     name: 'Kuti Mirch',
-    category: 'ground-spices',
+    category: 'special-grinds',
     description: 'Coarsely crushed red chillies for texture and heat.',
     tags: ['crushed', 'hot', 'chilli'],
     isFeatured: false,
@@ -188,7 +188,7 @@ const productsData = [
   },
   {
     name: 'Elaichi',
-    category: 'premium-spices',
+    category: 'whole-spices',
     description: 'Premium green cardamom pods, sweet and aromatic.',
     tags: ['premium', 'whole', 'cardamom'],
     isFeatured: true,
@@ -244,7 +244,7 @@ const productsData = [
   },
   {
     name: 'Khas Khas',
-    category: 'premium-spices',
+    category: 'whole-spices',
     description: 'Premium poppy seeds for a nutty flavor and thick gravies.',
     tags: ['premium', 'poppy'],
     isFeatured: true,
@@ -260,7 +260,7 @@ const productsData = [
   },
   {
     name: 'Bandhani Hing',
-    category: 'premium-spices',
+    category: 'whole-spices',
     description: 'Strong, premium quality asafoetida.',
     tags: ['premium', 'asafoetida', 'hing'],
     isFeatured: true,
@@ -425,3 +425,6 @@ const seed = async () => {
 };
 
 seed();
+
+
+
