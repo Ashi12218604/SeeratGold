@@ -60,8 +60,8 @@ export default {
       },
       fontFamily: {
         display: ['"Playfair Display"', 'Georgia', 'serif'],
-        body: ['"DM Sans"', 'system-ui', 'sans-serif'],
-        hindi: ['"Noto Sans Devanagari"', '"DM Sans"', 'sans-serif'],
+        body: ['"Montserrat"', 'system-ui', 'sans-serif'],
+        hindi: ['"Noto Sans Devanagari"', '"Montserrat"', 'sans-serif'],
       },
       fontSize: {
         'display-xl': ['4.5rem', { lineHeight: '1.1', letterSpacing: '-0.02em' }],
