@@ -150,11 +150,11 @@ const StoryJourney = () => {
       <div className="section-container relative z-20 w-full h-full flex flex-col pt-0 md:pt-16 pb-8 md:pb-8">
         
         {/* Desktop Section Header (Hidden on Mobile) */}
-        <div className="hidden md:block w-full mb-12">
+        <div className="hidden md:block w-full mb-8">
           <span className="text-secondary font-body text-xs font-bold tracking-widest uppercase drop-shadow-md">
             Our Journey
           </span>
-          <h2 className="font-display text-4xl font-bold text-white mt-2 drop-shadow-lg">
+          <h2 className="font-display text-3xl font-bold text-white mt-2 drop-shadow-lg">
             From Source to Kitchen
           </h2>
           <div className="w-12 h-1 bg-gradient-gold mt-4 rounded-full" />
@@ -187,12 +187,12 @@ const StoryJourney = () => {
               </div>
 
               {/* Headline */}
-              <h3 className="font-display text-2xl md:text-5xl lg:text-7xl font-bold text-white mb-2 md:mb-6 leading-tight drop-shadow-lg">
+              <h3 className="font-display text-2xl md:text-4xl lg:text-5xl font-bold text-white mb-2 md:mb-4 leading-tight drop-shadow-lg">
                 {currentStage.headline}
               </h3>
 
               {/* Description */}
-              <p className="font-body text-sm md:text-xl text-white/90 leading-relaxed drop-shadow-md">
+              <p className="font-body text-sm md:text-base lg:text-lg text-white/90 leading-relaxed drop-shadow-md max-w-lg">
                 {currentStage.description}
               </p>
             </motion.div>
