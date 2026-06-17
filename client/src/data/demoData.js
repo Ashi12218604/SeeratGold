@@ -304,7 +304,7 @@ export const demoProducts = [
     id: 'p25',
     name: 'Bandhani Hing',
     slug: 'bandhani-hing',
-    category: 'special-grinds',
+    category: 'blended-spices',
     description: 'Strong, premium quality asafoetida.',
     image: '/images/products/hing.png',
     weightOptions: [{ weight: '25g', price: 110 }, { weight: '50g', price: 210 }, { weight: '100g', price: 400 }],
