@@ -110,7 +110,7 @@ const ProductCard = ({ product }) => {
           </span>
           {hasDiscount && (
             <>
-              <span className="text-sm text-charcoal/40 line-through font-body">
+              <span className="text-sm text-charcoal/50 line-through font-display font-medium italic">
                 ₹{currentOption.mrp}
               </span>
               <span className="text-xs font-body font-semibold text-accent ml-1">

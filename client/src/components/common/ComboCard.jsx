@@ -98,7 +98,7 @@ const ComboCard = ({ combo, index = 0 }) => {
         {/* Price section */}
         <div className="flex items-baseline gap-3 pt-2 border-t border-charcoal/10">
           <span className="text-2xl font-display font-bold text-primary">₹{price}</span>
-          <span className="text-base text-charcoal/40 line-through font-body">₹{mrp}</span>
+          <span className="text-base text-charcoal/50 line-through font-display font-medium italic">₹{mrp}</span>
           <span className="text-sm font-body font-semibold text-accent">
             ({Math.round(((mrp - price) / mrp) * 100)}% off)
           </span>

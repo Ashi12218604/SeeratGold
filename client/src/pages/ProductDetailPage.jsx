@@ -187,7 +187,7 @@ const ProductDetailPage = () => {
                 </span>
                 {hasDiscount && (
                   <>
-                    <span className="text-lg text-charcoal/40 line-through font-body">
+                    <span className="text-lg text-charcoal/50 line-through font-display font-medium italic">
                       ₹{currentOption.mrp}
                     </span>
                     <span className="text-sm font-body font-bold text-accent bg-accent/10 px-2 py-0.5 rounded-full">
