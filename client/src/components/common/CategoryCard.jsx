@@ -46,7 +46,7 @@ const CategoryCard = ({ category, index = 0 }) => {
                 {name}
               </h3>
               <p className="text-cream/60 text-sm font-body">
-                {productCount} {productCount === 1 ? 'Product' : 'Products'}
+                {productCount || 0} {productCount === 1 ? 'Product' : 'Products'}
               </p>
             </div>
 

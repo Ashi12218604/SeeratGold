@@ -5,28 +5,28 @@ export const demoCategories = [
     name: 'Essentials',
     slug: 'essentials',
     description: 'Everyday spices that form the heart of Indian cooking.',
-    image: '/images/categories/placeholder.png'
+    image: '/images/categories/ground-spices.png'
   },
   {
     id: 'special-grinds',
     name: 'Special Grinds',
     slug: 'special-grinds',
     description: 'Specialty ground spices and powders for that extra flavor.',
-    image: '/images/categories/placeholder.png'
+    image: '/images/categories/premium-spices.png'
   },
   {
     id: 'whole-spices',
     name: 'Whole Spices',
     slug: 'whole-spices',
     description: 'Handpicked whole spices that retain their full aroma and potency.',
-    image: '/images/categories/placeholder.png'
+    image: '/images/categories/whole-spices.png'
   },
   {
     id: 'blended-spices',
     name: 'Blended Spices',
     slug: 'blended-spices',
     description: 'Perfectly balanced blends for your favorite dishes.',
-    image: '/images/categories/placeholder.png'
+    image: '/images/categories/blended-masalas.png'
   }
 ];
 
