@@ -44,11 +44,11 @@ const AboutPage = () => {
             >
                 <h2 className="font-display text-3xl font-bold text-primary mb-4">Pure by Origin</h2>
                 <p className="font-body text-charcoal-light leading-relaxed mb-6">
-                    Every spice has a home—a place where it grows best. We travel to these specific regions to procure our raw materials. From the vibrant turmeric fields to the aromatic cardamom plantations, our commitment to origin ensures authenticity in every pack.
+                    Every spice has a home—a place where it grows best. We travel to these specific regions to procure our raw materials. From the vibrant turmeric fields to the aromatic cardamom plantations, our commitment to origin ensures authenticity in every pack. Our spices are cultivated naturally, with absolutely no pesticides or harsh chemicals.
                 </p>
                 <h2 className="font-display text-3xl font-bold text-primary mb-4">Rich by Nature</h2>
                 <p className="font-body text-charcoal-light leading-relaxed">
-                    We believe in minimal intervention. Our cleaning and processing methods are designed to preserve the natural oils, colors, and aromas of the spices. What reaches your kitchen is nature's true flavor, uncompromised.
+                    We believe in minimal intervention. Our cleaning and processing methods are designed to preserve the natural oils, colors, aromas, and incredible medical benefits of the spices. What reaches your kitchen is nature's true flavor, 100% free of artificial preservatives.
                 </p>
             </motion.div>
         </div>

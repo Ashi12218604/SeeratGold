@@ -18,13 +18,13 @@ const usps = [
   {
     icon: Shield,
     title: 'Premium Quality',
-    description: 'Handpicked and carefully selected to meet the highest standards of taste and purity.',
+    description: 'Handpicked and carefully selected to meet the highest standards of taste and purity — completely free from harmful chemicals and pesticides.',
     image: '/images/story/cleaning.png',
   },
   {
     icon: Sparkles,
     title: 'Hygienic Processing',
-    description: 'Modern, clean facilities with rigorous quality control at every stage.',
+    description: 'Modern, clean facilities with rigorous quality control at every stage. We add absolutely no preservatives.',
     image: '/images/story/processing.png',
   },
   {
@@ -42,7 +42,7 @@ const usps = [
   {
     icon: Heart,
     title: 'Consistent Taste',
-    description: 'Same great flavor every time, because your recipes deserve dependable spices.',
+    description: 'Same great flavor every time, packing incredible medical benefits into your daily meals.',
     image: '/images/story/kitchen.png',
   },
 ];
