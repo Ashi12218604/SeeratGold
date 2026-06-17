@@ -177,9 +177,9 @@ const HeroSection = () => {
                   href={generateWhatsAppURL(WHATSAPP_NUMBER, getGeneralInquiryMessage())}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="btn-whatsapp text-sm md:text-base px-7 py-3 md:px-10 md:py-4"
+                  className="btn-white text-sm md:text-base px-7 py-3 md:px-10 md:py-4"
                 >
-                  <MessageCircle size={18} />
+                  <MessageCircle size={18} className="text-[#25D366]" />
                   Order on WhatsApp
                 </a>
               </motion.div>

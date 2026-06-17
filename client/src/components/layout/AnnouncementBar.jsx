@@ -2,7 +2,7 @@ import React from 'react';
 
 const AnnouncementBar = () => {
   return (
-    <div className="bg-primary text-cream text-xs font-body font-medium tracking-wide py-2 overflow-hidden w-full fixed top-0 z-[60]">
+    <div className="bg-charcoal-dark text-white text-xs font-body font-medium tracking-wide py-2 overflow-hidden w-full fixed top-0 z-[60]">
       {/* The inline style here overrides any reduced-motion settings to ensure it always moves */}
       <div 
         className="animate-marquee-scroll flex gap-12 whitespace-nowrap px-6"

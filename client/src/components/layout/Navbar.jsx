@@ -58,7 +58,7 @@ const Navbar = () => {
               <img 
                 src="/images/logo.png" 
                 alt="Seerat Gold Logo" 
-                className="h-10 md:h-16 w-auto rounded-lg shadow-md object-contain transition-transform duration-300 group-hover:scale-105" 
+                className="h-10 md:h-16 w-auto bg-white p-1 md:p-1.5 rounded-xl shadow-lg object-contain transition-transform duration-300 group-hover:scale-105" 
               />
               <span className={`font-body text-[10px] md:text-[11px] mt-1 font-medium tracking-[0.05em] transition-colors duration-300
                 ${isDarkNav ? 'text-primary' : 'text-white'}`}>
@@ -102,9 +102,9 @@ const Navbar = () => {
                 href={generateWhatsAppURL(WHATSAPP_NUMBER, getGeneralInquiryMessage())}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="btn-whatsapp text-base px-5 py-2.5"
+                className="btn-white text-base px-5 py-2.5"
               >
-                <MessageCircle size={18} />
+                <MessageCircle size={18} className="text-[#25D366]" />
                 WhatsApp
               </a>
             </div>
@@ -162,7 +162,7 @@ const Navbar = () => {
                     <img 
                       src="/images/logo.png" 
                       alt="Seerat Gold Logo" 
-                      className="h-20 w-auto rounded-lg shadow-md object-contain" 
+                      className="h-20 w-auto bg-white p-2 rounded-xl shadow-md object-contain" 
                     />
                     <span className="font-body text-[11px] mt-1.5 font-medium text-primary tracking-[0.05em]">
                       सीरत जहाँ.. स्वाद वहाँ
