@@ -8,8 +8,15 @@ const comboSchema = new mongoose.Schema(
     description: { type: String },
     products: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Product' }],
     images: [{ type: String }],
-    price: { type: Number, required: true },
-    mrp: { type: Number, required: true },
+    price: { type: Number },
+    mrp: { type: Number },
+    weightOptions: [
+      {
+        weight: { type: String, required: true },
+        price: { type: Number, required: true },
+        mrp: { type: Number },
+      },
+    ],
     tags: [{ type: String }],
     isFeatured: { type: Boolean, default: false },
     isActive: { type: Boolean, default: true },

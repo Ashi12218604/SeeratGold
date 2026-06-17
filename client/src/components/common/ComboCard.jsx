@@ -3,13 +3,18 @@
  * Shows included products, savings, and WhatsApp order button
  */
 
-import React from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Package, Check } from 'lucide-react';
 import WhatsAppButton from './WhatsAppButton';
 
 const ComboCard = ({ combo, index = 0 }) => {
-  const { name, description, image, products = [], price, mrp, savings, tags = [] } = combo;
+  const [selectedWeight, setSelectedWeight] = useState(0);
+  const { name, description, image, products = [], tags = [], weightOptions = [] } = combo;
+
+  const currentOption = weightOptions.length > 0 ? weightOptions[selectedWeight] : { price: combo.price, mrp: combo.mrp, weight: null };
+  const { price, mrp, weight } = currentOption;
+
 
   return (
     <motion.div
@@ -71,6 +76,25 @@ const ComboCard = ({ combo, index = 0 }) => {
           </ul>
         </div>
 
+        {/* Weight selector pills */}
+        {weightOptions.length > 0 && (
+          <div className="flex flex-wrap gap-1.5 mt-2">
+            {weightOptions.map((opt, idx) => (
+              <button
+                key={opt.weight}
+                onClick={() => setSelectedWeight(idx)}
+                className={`px-3 py-1 text-xs font-body font-medium rounded-full border transition-all ${
+                  selectedWeight === idx
+                    ? 'bg-primary text-cream border-primary'
+                    : 'bg-transparent text-charcoal/70 border-charcoal/20 hover:border-primary/50'
+                }`}
+              >
+                {opt.weight}
+              </button>
+            ))}
+          </div>
+        )}
+
         {/* Price section */}
         <div className="flex items-baseline gap-3 pt-2 border-t border-charcoal/10">
           <span className="text-2xl font-display font-bold text-primary">₹{price}</span>
@@ -83,6 +107,7 @@ const ComboCard = ({ combo, index = 0 }) => {
         {/* WhatsApp order button */}
         <WhatsAppButton
           productName={name}
+          weight={weight}
           variant="primary"
           className="w-full"
           isCombo

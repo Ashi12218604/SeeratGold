@@ -348,8 +348,8 @@ const seed = async () => {
           )
           .map((p) => p._id),
         images: ['/images/combos/all-purpose.jpeg'],
-        price: 349,
-        mrp: 450,
+        price: 239,
+        mrp: 294,
         tags: ['starter', 'essential'],
         isFeatured: true,
       },
@@ -363,13 +363,13 @@ const seed = async () => {
           )
           .map((p) => p._id),
         images: ['/images/combos/tadka-combo.jpeg'],
-        price: 349,
-        mrp: 450,
+        price: 479,
+        mrp: 595,
         tags: ['premium', 'blend'],
         isFeatured: true,
       },
       {
-        name: 'Trio Combo',
+        name: 'Everyday Essential Combo',
         slug: 'trio-combo',
         description: 'The classic Indian spice trinity.',
         products: products
@@ -378,8 +378,9 @@ const seed = async () => {
           )
           .map((p) => p._id),
         images: ['/images/combos/trio-combo.jpeg'],
-        price: 199,
-        mrp: 250,
+        price: 139,
+        mrp: 173,
+        weightOptions: [{ weight: '100g', mrp: 173, price: 139 }, { weight: '200g', mrp: 316, price: 249 }],
         tags: ['starter', 'essential'],
         isFeatured: false,
       },

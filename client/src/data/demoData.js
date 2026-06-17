@@ -349,14 +349,14 @@ export const demoProducts = [
 export const demoCombos = [
   {
     id: 'all-purpose',
-    name: 'All Purpose Combo (Everyday Essential)',
+    name: 'All Purpose Combo',
     slug: 'all-purpose',
     description: 'The everyday essential spices for your kitchen.',
     image: '/images/combos/all-purpose.jpeg',
     products: ['Haldi Powder', 'Dhania Powder', 'Mirch Powder', 'Garam Masala', 'Sabji Masala'],
-    price: 349,
-    mrp: 450,
-    savings: 101,
+    price: 239,
+    mrp: 294,
+    savings: 55,
   },
   {
     id: 'tadka-combo',
@@ -365,20 +365,21 @@ export const demoCombos = [
     description: 'Perfect for the ultimate tempering and finishing flavors.',
     image: '/images/combos/tadka-combo.jpeg',
     products: ['Hing Raw', 'Kashmiri Mirch', 'Jeera (Whole)'],
-    price: 349,
-    mrp: 450,
-    savings: 101,
+    price: 479,
+    mrp: 595,
+    savings: 116,
   },
   {
     id: 'trio-combo',
-    name: 'Trio Combo',
+    name: 'Everyday Essential Combo',
     slug: 'trio-combo',
     description: 'The classic Indian spice trinity.',
     image: '/images/combos/trio-combo.jpeg',
     products: ['Haldi Powder', 'Dhania Powder', 'Mirch Powder'],
-    price: 199,
-    mrp: 250,
-    savings: 51,
+    price: 139,
+    mrp: 173,
+    savings: 34,
+    weightOptions: [{ weight: '100g', mrp: 173, price: 139 }, { weight: '200g', mrp: 316, price: 249 }],
   }
 ];
 
