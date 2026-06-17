@@ -88,7 +88,7 @@ const StoryJourney = () => {
   const Icon = currentStage.icon;
 
   return (
-    <section id="story-section" className="relative w-full md:min-h-screen flex flex-col bg-charcoal-dark overflow-hidden pt-12 md:pt-0">
+    <section id="story-section" className="relative w-full md:min-h-[75vh] flex flex-col bg-charcoal-dark overflow-hidden pt-12 md:pt-0">
       
       {/* ---------------- MOBILE LAYOUT ---------------- */}
       {/* Mobile Section Header */}
