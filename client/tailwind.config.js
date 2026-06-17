@@ -59,9 +59,9 @@ export default {
         },
       },
       fontFamily: {
-        display: ['"Playfair Display"', 'Georgia', 'serif'],
-        body: ['"Montserrat"', 'system-ui', 'sans-serif'],
-        hindi: ['"Noto Sans Devanagari"', '"Montserrat"', 'sans-serif'],
+        display: ['"Outfit"', 'sans-serif'],
+        body: ['"Inter"', 'sans-serif'],
+        hindi: ['"Noto Sans Devanagari"', '"Inter"', 'sans-serif'],
       },
       fontSize: {
         'display-xl': ['4.5rem', { lineHeight: '1.1', letterSpacing: '-0.02em' }],
