@@ -62,7 +62,7 @@ const OffersPage = () => {
                 </div>
                 <div className="relative z-10">
                     <h3 className="font-display text-2xl font-bold text-white mb-3">Free Trial Kit</h3>
-                    <p className="font-body text-white/80 mb-6">Get a free Seerat Gold Trial Kit (worth Rs. 149) on orders above Rs. 1100.</p>
+                    <p className="font-body text-white/80 mb-6">Get a free Seerat Gold Trial Kit (worth Rs. 149) on orders above Rs. 999.</p>
                     <Link to="/products" className="text-secondary font-bold font-body hover:text-white transition-colors inline-flex items-center gap-1">
                       Order Now →
                     </Link>
