@@ -32,7 +32,7 @@ const Footer = () => {
           <div className="lg:col-span-1">
             <Link to="/" className="flex flex-col items-start gap-2 mb-6 group">
               <img 
-                src="/images/logo-square.png" 
+                src="/images/logo.png" 
                 alt="Seerat Gold Logo" 
                 className="h-16 md:h-20 w-auto rounded-lg shadow-lg object-contain transition-transform duration-300 group-hover:scale-105" 
               />

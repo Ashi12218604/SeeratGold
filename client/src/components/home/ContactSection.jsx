@@ -5,7 +5,7 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Phone, Mail, MapPin, Clock, MessageCircle } from 'lucide-react';
+import { Phone, Mail, MapPin, Clock, MessageCircle, Instagram } from 'lucide-react';
 import SectionTitle from '../common/SectionTitle';
 import WhatsAppButton from '../common/WhatsAppButton';
 import { CONTACT_INFO } from '../../utils/constants';
@@ -22,6 +22,7 @@ const contactItems = [
     isWhatsapp: true,
   },
   { icon: Mail, label: 'Email', value: CONTACT_INFO.email, href: `mailto:${CONTACT_INFO.email}` },
+  { icon: Instagram, label: 'Instagram', value: '@seerat.spices', href: CONTACT_INFO.instagram },
   { icon: MapPin, label: 'Address', value: CONTACT_INFO.address, href: '#' },
   { icon: Clock, label: 'Hours', value: CONTACT_INFO.workingHours, href: '#' },
 ];
@@ -75,15 +76,28 @@ const ContactSection = () => {
               <WhatsAppButton variant="primary" className="w-full sm:w-auto" />
             </div>
 
-            {/* QR Code */}
-            <div className="p-4 rounded-xl bg-white shadow-card text-center">
-              <p className="text-xs font-body font-semibold text-charcoal/50 uppercase tracking-wider mb-3">
-                Scan to WhatsApp
-              </p>
-              <div className="flex flex-col items-center justify-center mx-auto">
-                <a href={CONTACT_INFO.whatsappLink} target="_blank" rel="noopener noreferrer" className="bg-white p-2 rounded-lg border border-charcoal/10 inline-block hover:shadow-md transition-shadow">
-                  <QRCodeSVG value={CONTACT_INFO.whatsappLink} size={128} />
-                </a>
+            {/* QR Codes */}
+            <div className="grid grid-cols-2 gap-4">
+              <div className="p-4 rounded-xl bg-white shadow-card text-center">
+                <p className="text-xs font-body font-semibold text-charcoal/50 uppercase tracking-wider mb-3">
+                  Scan to WhatsApp
+                </p>
+                <div className="flex flex-col items-center justify-center mx-auto">
+                  <a href={CONTACT_INFO.whatsappLink} target="_blank" rel="noopener noreferrer" className="bg-white p-2 rounded-lg border border-charcoal/10 inline-block hover:shadow-md transition-shadow">
+                    <QRCodeSVG value={CONTACT_INFO.whatsappLink} size={110} />
+                  </a>
+                </div>
+              </div>
+
+              <div className="p-4 rounded-xl bg-white shadow-card text-center">
+                <p className="text-xs font-body font-semibold text-charcoal/50 uppercase tracking-wider mb-3">
+                  Instagram
+                </p>
+                <div className="flex flex-col items-center justify-center mx-auto">
+                  <a href={CONTACT_INFO.instagram} target="_blank" rel="noopener noreferrer" className="bg-white p-2 rounded-lg border border-charcoal/10 inline-block hover:shadow-md transition-shadow">
+                    <img src="/images/instagram-qr.png" alt="Instagram QR Code" width="110" height="110" />
+                  </a>
+                </div>
               </div>
             </div>
           </motion.div>

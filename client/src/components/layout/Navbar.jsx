@@ -56,7 +56,7 @@ const Navbar = () => {
             {/* Logo */}
             <Link to="/" className="flex flex-col items-center group">
               <img 
-                src="/images/logo-square.png" 
+                src="/images/logo.png" 
                 alt="Seerat Gold Logo" 
                 className="h-10 md:h-16 w-auto rounded-lg shadow-md object-contain transition-transform duration-300 group-hover:scale-105" 
               />
@@ -160,7 +160,7 @@ const Navbar = () => {
                 <div className="flex items-center justify-between p-6 border-b border-cream-dark">
                   <div className="flex flex-col items-center justify-center w-full">
                     <img 
-                      src="/images/logo-square.png" 
+                      src="/images/logo.png" 
                       alt="Seerat Gold Logo" 
                       className="h-20 w-auto rounded-lg shadow-md object-contain" 
                     />

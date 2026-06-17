@@ -93,7 +93,7 @@ export const demoProducts = [
     slug: 'saunf-powder',
     category: 'ground-spices',
     description: 'Sweet and aromatic fennel powder.',
-    image: '/images/products/saunf-powder.jpg',
+    image: '/images/products/saunf-powder.jpeg',
     weightOptions: [{ weight: '50g', price: 43 }, { weight: '100g', price: 80 }],
     isFeatured: false,
     tags: ['sweet', 'fennel']
@@ -159,7 +159,7 @@ export const demoProducts = [
     slug: 'kuti-mirch',
     category: 'ground-spices',
     description: 'Coarsely crushed red chillies for texture and heat.',
-    image: '/images/products/kuti-mirch.jpg',
+    image: '/images/products/kuti-mirch.jpeg',
     weightOptions: [{ weight: '50g', price: 36 }, { weight: '100g', price: 68 }, { weight: '200g', price: 128 }, { weight: '500g', price: 315 }],
     isFeatured: false,
     tags: ['crushed', 'hot', 'chilli']

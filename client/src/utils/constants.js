@@ -63,18 +63,18 @@ export const PRODUCTS = [
   { id: 5, name: 'Elaichi', slug: 'elaichi', category: 'whole-spices', image: '/images/products/elaichi.png' },
   { id: 6, name: 'Black Pepper (Whole)', slug: 'black-pepper-whole', category: 'whole-spices', image: '/images/products/kali-mirch.png' },
   { id: 7, name: 'Methi Dana', slug: 'methi-dana', category: 'whole-spices', image: '/images/products/methi-dana.jpg' },
-  { id: 8, name: 'Garam Masala (Whole)', slug: 'garam-masala-whole', category: 'whole-spices', image: '/images/products/placeholder.png' },
+  { id: 8, name: 'Garam Masala (Whole)', slug: 'garam-masala-whole', category: 'whole-spices', image: '/images/products/sabut-garam-masala.jpeg' },
 
   // Bestsellers
   { id: 9, name: 'Hing Bandhani', slug: 'hing-bandhani', category: 'bestsellers', image: '/images/products/placeholder.png' },
-  { id: 10, name: 'Hing Raw', slug: 'hing-raw', category: 'bestsellers', image: '/images/products/placeholder.png' },
+  { id: 10, name: 'Hing Raw', slug: 'hing-raw', category: 'bestsellers', image: '/images/products/raw-hing.jpeg' },
   { id: 11, name: 'Kasuri Methi', slug: 'kasuri-methi', category: 'bestsellers', image: '/images/products/kasuri-methi.png' },
 
   // Essentials
   { id: 12, name: 'Haldi Powder', slug: 'haldi-powder', category: 'essentials', image: '/images/products/turmeric.png' },
   { id: 13, name: 'Dhania Powder', slug: 'dhania-powder', category: 'essentials', image: '/images/products/corriander-powder.png' },
   { id: 14, name: 'Mirch Powder', slug: 'mirch-powder', category: 'essentials', image: '/images/products/mirchi.png' },
-  { id: 15, name: 'Kuti Mirch Powder', slug: 'kuti-mirch-powder', category: 'essentials', image: '/images/products/kuti-mirch.jpg' },
+  { id: 15, name: 'Kuti Mirch Powder', slug: 'kuti-mirch-powder', category: 'essentials', image: '/images/products/kuti-mirch.jpeg' },
   { id: 16, name: 'Garam Masala', slug: 'garam-masala', category: 'essentials', image: '/images/products/garam-masala.png' },
   { id: 17, name: 'Sabji Masala', slug: 'sabji-masala', category: 'essentials', image: '/images/products/sabji-masala.png' },
 
@@ -84,7 +84,7 @@ export const PRODUCTS = [
   { id: 20, name: 'Kashmiri Mirch', slug: 'kashmiri-mirch', category: 'specials', image: '/images/products/kasmiri-mirch.png' },
   { id: 21, name: 'Dry Ginger', slug: 'dry-ginger', category: 'specials', image: '/images/products/ginger-powder.png' },
   { id: 22, name: 'Black Pepper (Powder)', slug: 'black-pepper-powder', category: 'specials', image: '/images/products/black-pepper.png' },
-  { id: 23, name: 'Saunf Powder', slug: 'saunf-powder', category: 'specials', image: '/images/products/saunf-powder.jpg' },
+  { id: 23, name: 'Saunf Powder', slug: 'saunf-powder', category: 'specials', image: '/images/products/saunf-powder.jpeg' },
 ];
 
 // Demo combo packs
@@ -155,11 +155,12 @@ export const CONTACT_INFO = {
   address: 'Seerat Gold, Bhandari Bagh, Dehradun, Uttarakhand 248001',
   mapQuery: 'Garg Departmental Store, Bhandari Bagh, Dehradun, Uttarakhand 248001',
   workingHours: 'Mon - Sat: 10:00 AM - 8:00 PM',
+  instagram: 'https://instagram.com/seerat.spices',
 };
 
 // Social links (demo)
 export const SOCIAL_LINKS = {
-  instagram: 'https://instagram.com/seeratgold',
+  instagram: 'https://instagram.com/seerat.spices',
   facebook: 'https://facebook.com/seeratgold',
   youtube: 'https://youtube.com/@seeratgold',
 };
