@@ -1,7 +1,8 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { MessageCircle, ChevronDown } from 'lucide-react';
+import { MessageCircle, ChevronDown, Instagram } from 'lucide-react';
 import { generateWhatsAppURL, getGeneralInquiryMessage, WHATSAPP_NUMBER } from '../../utils/whatsapp';
+import { SOCIAL_LINKS } from '../../utils/constants';
 import { useNavigate, Link } from 'react-router-dom';
 
 const HeroSection = () => {
@@ -181,6 +182,16 @@ const HeroSection = () => {
                 >
                   <MessageCircle size={18} className="text-[#25D366]" />
                   Order on WhatsApp
+                </a>
+
+                <a
+                  href={SOCIAL_LINKS.instagram}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn-white text-sm md:text-base px-7 py-3 md:px-10 md:py-4"
+                >
+                  <Instagram size={18} className="text-[#E1306C]" />
+                  Follow on Insta
                 </a>
               </motion.div>
             </motion.div>
