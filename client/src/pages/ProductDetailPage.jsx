@@ -159,26 +159,28 @@ const ProductDetailPage = () => {
               </p>
 
               {/* Weight selector */}
-              <div className="mb-6">
-                <p className="text-sm font-body font-semibold text-charcoal/50 uppercase tracking-wider mb-3">
-                  Select Weight
-                </p>
-                <div className="flex flex-wrap gap-2">
-                  {product.weightOptions?.map((opt, index) => (
-                    <button
-                      key={opt.weight}
-                      onClick={() => setSelectedWeight(index)}
-                      className={`px-5 py-2.5 rounded-xl border-2 font-body font-semibold text-sm transition-all ${
-                        selectedWeight === index
-                          ? 'bg-primary text-cream border-primary shadow-md'
-                          : 'bg-white text-charcoal/70 border-charcoal/15 hover:border-primary/50'
-                      }`}
-                    >
-                      {opt.weight}
-                    </button>
-                  ))}
+              {product.weightOptions?.some(opt => opt.weight) && (
+                <div className="mb-6">
+                  <p className="text-sm font-body font-semibold text-charcoal/50 uppercase tracking-wider mb-3">
+                    Select Weight
+                  </p>
+                  <div className="flex flex-wrap gap-2">
+                    {product.weightOptions?.map((opt, index) => (
+                      <button
+                        key={opt.weight}
+                        onClick={() => setSelectedWeight(index)}
+                        className={`px-5 py-2.5 rounded-xl border-2 font-body font-semibold text-sm transition-all ${
+                          selectedWeight === index
+                            ? 'bg-primary text-cream border-primary shadow-md'
+                            : 'bg-white text-charcoal/70 border-charcoal/15 hover:border-primary/50'
+                        }`}
+                      >
+                        {opt.weight}
+                      </button>
+                    ))}
+                  </div>
                 </div>
-              </div>
+              )}
 
               {/* Price display */}
               <div className="flex items-baseline gap-3 mb-8">
@@ -219,6 +221,8 @@ const ProductDetailPage = () => {
                   { label: '100% Pure', icon: '🌿' },
                   { label: 'Fresh Packed', icon: '📦' },
                   { label: 'No Additives', icon: '✅' },
+                  { label: 'No Chemicals', icon: '🚫' },
+                  { label: 'No Added Preservatives', icon: '🛡️' },
                 ].map((item) => (
                   <div key={item.label} className="flex items-center gap-2 text-sm font-body text-charcoal/60">
                     <span>{item.icon}</span>

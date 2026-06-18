@@ -329,7 +329,7 @@ export const demoProducts = [
     category: 'whole-spices',
     description: 'Premium whole spices blend for authentic Garam Masala.',
     image: '/images/products/sabut-garam-masala.jpeg',
-    weightOptions: [{ weight: '50g', price: 60 }],
+    weightOptions: [{ weight: '50g', price: 99 }, { weight: '100g', price: 178 }],
     isFeatured: false,
     tags: ['premium', 'whole', 'masala']
   },
@@ -340,7 +340,7 @@ export const demoProducts = [
     category: 'whole-spices',
     description: 'Pure, raw asafoetida with an intense flavor.',
     image: '/images/products/raw-hing.jpeg',
-    weightOptions: [{ weight: '25g', price: 150 }],
+    weightOptions: [{ price: 800 }],
     isFeatured: false,
     tags: ['premium', 'asafoetida', 'raw']
   }

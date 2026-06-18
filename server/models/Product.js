@@ -2,7 +2,7 @@ import mongoose from 'mongoose';
 
 const weightOptionSchema = new mongoose.Schema(
   {
-    weight: { type: String, required: true },
+    weight: { type: String },
     price: { type: Number, required: true },
     mrp: { type: Number, required: true },
   },

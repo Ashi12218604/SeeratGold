@@ -268,7 +268,7 @@ const productsData = [
     description: 'Premium whole spices blend for authentic Garam Masala.',
     tags: ['premium', 'whole', 'masala'],
     isFeatured: false,
-    weightOptions: [{ weight: '50g', price: 60 }],
+    weightOptions: [{ weight: '50g', price: 99 }, { weight: '100g', price: 178 }],
   },
   {
     name: 'Hing Raw',
@@ -276,7 +276,7 @@ const productsData = [
     description: 'Pure, raw asafoetida with an intense flavor.',
     tags: ['premium', 'asafoetida', 'raw'],
     isFeatured: false,
-    weightOptions: [{ weight: '25g', price: 150 }],
+    weightOptions: [{ price: 800 }],
   },
   {
     name: 'Bandhani Hing',
