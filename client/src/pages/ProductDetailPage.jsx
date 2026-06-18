@@ -7,7 +7,8 @@ import React, { useState, useEffect, useMemo } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { Helmet } from 'react-helmet-async';
-import { ChevronRight, Home, ArrowLeft, ArrowRight } from 'lucide-react';
+import { ChevronRight, Home, ArrowLeft, ArrowRight, Instagram } from 'lucide-react';
+import { SOCIAL_LINKS } from '../utils/constants';
 import WhatsAppButton from '../components/common/WhatsAppButton';
 import ProductCard from '../components/common/ProductCard';
 import SectionTitle from '../components/common/SectionTitle';
@@ -207,12 +208,15 @@ const ProductDetailPage = () => {
                   variant="primary"
                   className="flex-1 justify-center py-3.5 text-base"
                 />
-                <WhatsAppButton
-                  productName={product.name}
-                  weight={currentOption.weight}
-                  variant="primary"
-                  className="flex-1 justify-center py-3.5 text-base !bg-charcoal/10 !text-charcoal hover:!bg-charcoal/15"
-                />
+                <a
+                  href={SOCIAL_LINKS.instagram}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex-1 flex items-center justify-center gap-1.5 py-3.5 text-base font-body font-semibold rounded-xl transition-all bg-charcoal/10 text-charcoal hover:bg-charcoal/15"
+                >
+                  <Instagram size={18} />
+                  <span>Instagram</span>
+                </a>
               </div>
 
               {/* Highlights */}
