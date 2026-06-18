@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { MessageCircle, ChevronDown, Instagram } from 'lucide-react';
+import { MessageCircle, ChevronDown } from 'lucide-react';
+import InstagramIcon from '../common/InstagramIcon';
 import { generateWhatsAppURL, getGeneralInquiryMessage, WHATSAPP_NUMBER } from '../../utils/whatsapp';
 import { SOCIAL_LINKS } from '../../utils/constants';
 import { useNavigate, Link } from 'react-router-dom';
@@ -190,7 +191,7 @@ const HeroSection = () => {
                   rel="noopener noreferrer"
                   className="btn-white text-sm md:text-base px-7 py-3 md:px-10 md:py-4"
                 >
-                  <Instagram size={18} className="text-[#E1306C]" />
+                  <InstagramIcon size={18} className="text-[#E1306C]" />
                   Follow on Insta
                 </a>
               </motion.div>
